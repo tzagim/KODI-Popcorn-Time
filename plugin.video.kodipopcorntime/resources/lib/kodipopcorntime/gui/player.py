@@ -28,7 +28,17 @@ class Player(_Base):
         _c = xbmc.getInfoLabel('ListItem.CastAndRole')
         if _c:
             castAndRole = [cr.split(' as ', 1) for cr in _c.replace('\n', ' / ').split(' / ')]
-
+        
+        if xbmc.getInfoLabel('ListItem.VideoResolution') == '4K':
+            _width = 3840
+        else:
+            _width = int(xbmc.getInfoLabel('ListItem.VideoResolution'))
+        if xbmc.getInfoLabel('ListItem.VideoResolution') == '4K' or xbmc.getInfoLabel('ListItem.VideoResolution') == '2160':
+            _height = 2160 
+        elif xbmc.getInfoLabel('ListItem.VideoResolution') == '1920' or xbmc.getInfoLabel('ListItem.VideoResolution') == '1080':
+            _height = 1080
+        else:
+            _height = 720
         return {
             "label": xbmc.getInfoLabel('ListItem.Label'),
             "icon": xbmc.getInfoLabel('ListItem.Icon'),
@@ -55,8 +65,8 @@ class Player(_Base):
             "stream_info": {
                 "video": {
                     "codec": xbmc.getInfoLabel('ListItem.VideoCodec'),
-                    "width": int(xbmc.getInfoLabel('ListItem.VideoResolution')),
-                    "height": int(xbmc.getInfoLabel('ListItem.VideoResolution')) or 1080
+                    "width": _width,
+                    "height": _height
                 },
                 "audio": {
                     "codec": xbmc.getInfoLabel('ListItem.AudioCodec'),

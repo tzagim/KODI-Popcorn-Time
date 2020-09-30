@@ -41,7 +41,7 @@ class BaseContent(object):
         width = 640
         height = 480
         if torrents.get('2160p'):
-            width = 3840 
+            width = 3840
             height = 2160
         elif torrents.get('1080p'):
             width = 1920
@@ -314,10 +314,11 @@ class BaseContentWithSeasons(BaseContent):
     def _get_torrents_information(data):
         torrents = {}
         for quality, torrent_info in data[0].get('torrents', {}).items():
-            torrent_url = torrent_info.get('url')
-            if quality in settings.QUALITIES and torrent_url is not None:
-                torrents.update({
-                    quality: torrent_url,
-                    '{0}size'.format(quality): 1000000000*60,
-                })
+            if torrent_info is not None:
+                torrent_url = torrent_info.get('url')
+                if quality in settings.QUALITIES and torrent_url is not None:
+                    torrents.update({
+                        quality: torrent_url,
+                        '{0}size'.format(quality): 1000000000*60,
+                    })
         return torrents

@@ -57,12 +57,6 @@ class TvShow(BaseContentWithSeasons):
     def _get_item_info(cls, data):
         tagline = ''
         try:
-            tagline_temp = ('2160p: %s seeds; ' %data[0].get('torrents').get('2160p').get('seeds'))
-        except:
-            pass
-        else:
-            tagline += tagline_temp
-        try:
             tagline_temp = ('1080p: %s seeds; ' %data[0].get('torrents').get('1080p').get('seeds'))
         except:
             pass
