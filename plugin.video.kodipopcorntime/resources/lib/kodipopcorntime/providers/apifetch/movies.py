@@ -56,6 +56,12 @@ class Movie(BaseContent):
     def _get_item_info(cls, data):
         tagline = ''
         try:
+            tagline_temp = ('2160p: %s seeds; ' %data.get('torrents').get('en').get('2160p').get('seed'))
+        except:
+            pass
+        else:
+            tagline += tagline_temp
+        try:
             tagline_temp = ('1080p: %s seeds; ' %data.get('torrents').get('en').get('1080p').get('seed'))
         except:
             pass

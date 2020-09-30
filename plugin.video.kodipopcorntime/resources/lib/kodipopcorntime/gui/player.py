@@ -56,7 +56,7 @@ class Player(_Base):
                 "video": {
                     "codec": xbmc.getInfoLabel('ListItem.VideoCodec'),
                     "width": int(xbmc.getInfoLabel('ListItem.VideoResolution')),
-                    "height": xbmc.getInfoLabel('ListItem.VideoResolution') == '1920' and 1080 or 720
+                    "height": int(xbmc.getInfoLabel('ListItem.VideoResolution')) or 1080
                 },
                 "audio": {
                     "codec": xbmc.getInfoLabel('ListItem.AudioCodec'),

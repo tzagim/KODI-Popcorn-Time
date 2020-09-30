@@ -40,7 +40,10 @@ class BaseContent(object):
         # Set video width and hight
         width = 640
         height = 480
-        if torrents.get('1080p'):
+        if torrents.get('2160p'):
+            width = 3840 
+            height = 2160
+        elif torrents.get('1080p'):
             width = 1920
             height = 1080
         elif torrents.get('720p'):
