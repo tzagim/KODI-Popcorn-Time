@@ -6,8 +6,6 @@
 
 # KODI Popcorn Time #
 
-[![Donate](https://img.shields.io/badge/Donate-Paypal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=83UA43TPBRHLL)
-
 ## What it is ##
 With KODI Popcorn Time you can search for Movies, TV Shows and Animes that you can see immediately in KODI.
 
