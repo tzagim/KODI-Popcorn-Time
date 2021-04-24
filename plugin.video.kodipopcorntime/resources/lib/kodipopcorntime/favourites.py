@@ -141,7 +141,7 @@ def _create_movie_favs():
     movie_favs1 = []
     for fav in movie_favs:
         log("(Favourites_movie) %s" % fav)
-        search = '%s/movie/%s' % ('https://tv-v2.api-fetch.sh', fav['id'])
+        search = '%s/movie/%s' % ('https://popcorn-ru.tk', fav['id'])
         req = urllib2.Request(search, headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.66 Safari/537.36", "Accept-Encoding": "none"})
         response = urllib2.urlopen(req)
         movie_fav = json.loads(response.read())
