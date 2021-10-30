@@ -3,7 +3,7 @@ import xbmc, sys, os, time, stat, shutil
 from . import SUBTITLE_ISO, QUALITIES, PUBLIC_TRACKERS
 from .addon import Addon
 from .base import _Base, _MetaClass
-from urlparse import urlparse
+from urllib.parse import urlparse
 from kodipopcorntime.platform import Platform
 from kodipopcorntime.exceptions import Error, Notify
 from kodipopcorntime.logging import log, LOGLEVEL
@@ -46,7 +46,7 @@ class _MetaClass2(_MetaClass):
     def _preferred_subtitles(cls):
         subtitles = []
         if cls.subtitles_provider:
-            for i in xrange(3):
+            for i in range(3):
                 _n = int(__addon__.getSetting('%s_subtitle_language%d' %(cls.mediaType, i)))
                 if not _n > 0:
                     break
@@ -68,7 +68,7 @@ class _MetaClass2(_MetaClass):
                 domain = "http://"+domain
             d = urlparse(domain)
             if d.netloc:
-                p.append(u"%s://%s/%s" %(d.scheme, d.netloc, d.path))
+                p.append("%s://%s/%s" %(d.scheme, d.netloc, d.path))
         cls.proxies = p
 
     def _qualities(cls):
@@ -105,7 +105,7 @@ class _MetaClass2(_MetaClass):
             if not os.path.isdir(_path):
                 raise Notify('Download path does not exist (%s)' % _path, 30310, 1)
 
-            cls.user_download_path = _path.encode(Addon.fsencoding)
+            cls.user_download_path = _path
         else:
             cls.user_download_path = None
 
@@ -141,11 +141,11 @@ class _MetaClass2(_MetaClass):
         if Platform.system == 'windows':
             binary = "torrent2http.exe"
 
-        binary_path = os.path.join(__addon__.getAddonInfo('path'), 'resources', 'bin', "%s_%s" %(Platform.system, Platform.arch), binary).encode(Addon.fsencoding)
+        binary_path = os.path.join(__addon__.getAddonInfo('path'), 'resources', 'bin', "%s_%s" %(Platform.system, Platform.arch), binary)
 
         if Platform.system == "android":
             existBinary(binary_path)
-            binary_path = ensure_android_binary_location(binary_path, os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(xbmc.translatePath('special://xbmc')))), "files", __addon__.getAddonInfo('id'), binary).encode(Addon.fsencoding))
+            binary_path = ensure_android_binary_location(binary_path, os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(xbmc.translatePath('special://xbmc')))), "files", __addon__.getAddonInfo('id'), binary))
 
         existBinary(binary_path)
         ensure_exec(binary_path)
@@ -217,17 +217,14 @@ class _MetaClass2(_MetaClass):
         }
 
         args = [cls.binary_path]
-        for k, v in kwargs.iteritems():
+        for k, v in kwargs.items():
             if v == 'true':
                 args.append(k)
             elif v == 'false':
                 args.append("%s=false" % k)
             elif v is not None:
                 args.append(k)
-                if isinstance(v, str):
-                    args.append(v.decode('utf-8').encode(Addon.fsencoding))
-                else:
-                    args.append(str(v))
+                args.append(str(v))
 
         cls.torrent_options = args
 
@@ -235,10 +232,6 @@ class _Base2(_Base):
     @classmethod
     def get_torrent_options(self, magnet, port):
         args = ['--uri', magnet, '--bind', '127.0.0.1:%s' %port]
-        for i in xrange(4):
-            if isinstance(args[i], str):
-                args[i] = args[i].decode('utf-8')
-            args[i] = args[i].encode(Addon.fsencoding)
         return self.torrent_options+args
 
 def load_provider(module):

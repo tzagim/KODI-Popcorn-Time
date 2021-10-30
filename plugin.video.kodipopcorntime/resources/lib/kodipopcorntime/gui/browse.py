@@ -15,7 +15,8 @@ class Browse(_Base3):
         log("(Browse) Creating view", LOGLEVEL.INFO)
         log("(Browse) Action: %s" %str(dict([('action', action)], **params)))
         curPageNum = self.getCurPageNum()
-        with closing(Cache("%s.browse.%s" %(self.mediaSettings.mediaType, hashlib.md5(str(dict([('action', action)], **params))).hexdigest()), ttl=24 * 3600, last_changed=self.mediaSettings.lastchanged)) as cache:
+        monitor = xbmc.Monitor()
+        with closing(Cache("%s.browse.%s" %(self.mediaSettings.mediaType, hashlib.md5(str(dict([('action', action)], **params)).encode()).hexdigest()), ttl=24 * 3600, last_changed=self.mediaSettings.lastchanged)) as cache:
             # Reset page number if the user have cleaned the cache
             if not cache:
                 curPageNum = 1
@@ -34,7 +35,7 @@ class Browse(_Base3):
                     log("(Browse) Getting item list")
                     with closing(media.List(self.mediaSettings, 'browse', *(action, curPageNum,), **params)) as medialist:
                         while not medialist.is_done(0.100):
-                            if xbmc.abortRequested or dialog.iscanceled():
+                            if monitor.abortRequested() or dialog.iscanceled():
                                 raise Abort()
                             attempts = medialist.attempts()
                             if attempts > 1:
@@ -65,7 +66,7 @@ class Browse(_Base3):
                         [mediadata.submit(item) for item in items]
                         mediadata.start()
                         while not mediadata.is_done(0.100):
-                            if xbmc.abortRequested or dialog.iscanceled():
+                            if monitor.abortRequested() or dialog.iscanceled():
                                 raise Abort()
                         items = mediadata.get_data()
                         if not items:

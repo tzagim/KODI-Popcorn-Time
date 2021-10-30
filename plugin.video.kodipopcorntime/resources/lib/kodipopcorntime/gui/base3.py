@@ -19,7 +19,6 @@ class _Base3(_Base2):
                 __addon__.setSetting("last_update_id", update_id)
         except:
             log_error()
-            sys.exc_clear()
 
     def getOpenSettings(self):
         return (__addon__.getLocalizedString(30010), 'Addon.OpenSettings(%s)' %_settings.id)

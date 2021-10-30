@@ -1,7 +1,7 @@
 import json
 import os
 import sys
-import urllib2
+from urllib.request import Request, urlopen
 
 import xbmc
 
@@ -49,14 +49,14 @@ class BaseContent(object):
 
         return {
             'video': {
-                'codec': u'h264',
+                'codec': 'h264',
                 'duration': int(0),
                 'width': width,
                 'height': height,
             },
             'audio': {
-                'codec': u'aac',
-                'language': u'en',
+                'codec': 'aac',
+                'language': 'en',
                 'channels': 2,
             },
         }
@@ -167,14 +167,14 @@ class BaseContentWithSeasons(BaseContent):
                 sort=kwargs['act'],
             )
 
-        req = urllib2.Request(
+        req = Request(
             search,
             headers={
                 "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.66 Safari/537.36",
                 "Accept-Encoding": "none",
             },
         )
-        response = urllib2.urlopen(req)
+        response = urlopen(req)
         results = json.loads(response.read())
 
         items = [
@@ -227,7 +227,7 @@ class BaseContentWithSeasons(BaseContent):
 
     @classmethod
     def get_seasons(cls, dom, **kwargs):
-        req = urllib2.Request(
+        req = Request(
             '{domain}/{request_path}/{content_id}'.format(
                 domain=dom[0],
                 request_path=cls.request_path,
@@ -239,7 +239,7 @@ class BaseContentWithSeasons(BaseContent):
             },
         )
 
-        response = urllib2.urlopen(req)
+        response = urlopen(req)
         result = json.loads(response.read())
         seasons = result['episodes']
 

@@ -1,6 +1,7 @@
 ﻿#!/usr/bin/python
-import xbmcgui, xbmc, simplejson, sys, time, os, UserDict, socket, glob
-from urllib import urlencode
+import xbmcgui, xbmc, simplejson, sys, time, os, socket, glob
+from collections import UserDict
+from urllib.parse import urlencode
 from kodipopcorntime.exceptions import Error
 from kodipopcorntime.logging import log, log_error, LOGLEVEL
 from kodipopcorntime import settings
@@ -33,7 +34,11 @@ def xbmcItem(label='', label2='', icon=None, thumbnail=None, path=None, info=Non
              info_type='video', properties=None, stream_info=None,
              context_menu=None, replace_context_menu=False):
 
-    _listitem = xbmcgui.ListItem(label, label2, icon, thumbnail, path)
+    _listitem = xbmcgui.ListItem(label, label2, path)
+    _listitem.setArt({
+        'icon': icon,
+        'thumb': thumbnail,
+    })
     if info:
         _listitem.setInfo(info_type, info)
     if stream_info:
@@ -46,7 +51,7 @@ def xbmcItem(label='', label2='', icon=None, thumbnail=None, path=None, info=Non
         _listitem.addContextMenuItems(context_menu, replace_context_menu)
     return _listitem
 
-class Cache(UserDict.DictMixin):
+class Cache(UserDict):
     def __init__(self, filename, ttl=0, readOnly=False, last_changed=0):
         self._path      = os.path.join(settings.addon.cache_path, filename)
         self._readOnly  = readOnly
@@ -85,7 +90,6 @@ class Cache(UserDict.DictMixin):
         try:
             return self._db['data'][key]
         except KeyError:
-            sys.exc_clear()
             return default
 
     def copy(self):
@@ -98,7 +102,6 @@ class Cache(UserDict.DictMixin):
         try:
             self._db['data'][key] = self._db['data'][key] + value
         except KeyError:
-            sys.exc_clear()
             self._db['data'][key] = value
 
     def __delitem__(self, key):
@@ -117,7 +120,7 @@ class Cache(UserDict.DictMixin):
     def __len__(self):
         return len(self._db['data'])
 
-    def __nonzero__(self):
+    def __bool__(self):
         if len(self._db['data']) > 0:
             return True
         return False
@@ -131,7 +134,7 @@ class Cache(UserDict.DictMixin):
     def _build_str(self, cache, level=0):
         pieces = []
         tabs = ""
-        for i in xrange(level):
+        for i in range(level):
             tabs = tabs+'\t'
         joinStr = '%s\t, %s\t\n' %(tabs, tabs)
         if isinstance(cache, dict):
@@ -177,14 +180,14 @@ class SafeDialogProgress(xbmcgui.DialogProgress):
         """ set jobs for progress """
         self._mentions = number
 
-    def update(self, count=0, *args, **kwargs):
+    def update(self, count, line1, line2, line3, *args, **kwargs):
         percent = 0
         self._counter = self._counter+count
         if self._mentions:
             percent = int(self._counter*100/self._mentions)
             if percent > 100:
                 percent = 100
-        super(SafeDialogProgress, self).update(percent, *args, **kwargs)
+        super(SafeDialogProgress, self).update(percent, '\n'.join(filter(bool, [line1, line2, line3])), *args, **kwargs)
 
     def __del__(self):
         if hasattr(self, '_counter'):
@@ -209,7 +212,7 @@ class Dialog(xbmcgui.Dialog):
         if yeslabel:
             yeslabelStr = __addon__.getLocalizedString(yeslabel)
 
-        return super(Dialog, self).yesno(headingStr, lineStr1, lineStr2, lineStr3, nolabelStr, yeslabelStr, autoclose)
+        return super(Dialog, self).yesno(headingStr, '\n'.join(filter(bool, [lineStr1, lineStr2, lineStr3])), nolabelStr, yeslabelStr, autoclose)
 
 def cleanDictList(DictList):
     if isinstance(DictList, dict):
@@ -260,7 +263,7 @@ BYTEABBR = [
 ]
 
 def shortenBytes(byts):
-    for i in xrange(9):
+    for i in range(9):
         _B = byts/1024.0
         if _B < 1:
             return "%.1f %s" %(byts, BYTEABBR[i])
@@ -291,4 +294,3 @@ def cleanDebris():
                 clear_media_cache(_m.media_cache_path)
     except:
         log_error()
-        sys.exc_clear()

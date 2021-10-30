@@ -6,7 +6,7 @@ This is the continuation of markop159's work on bringing Popcorn Time to Kodi.
 With KODI Popcorn Time you can search for Movies, TV Shows and Animes that you can see immediately in KODI.
 
 ## Supported Platforms ##
-* XBMC/KODI 13.x and later
+* Kodi 19.0 and later
 * Windows x32 and x64
 * OS X x32 and x64
 * Linux x32, x64 and ARM

@@ -81,7 +81,7 @@ class Movie(BaseContent):
             'tagline': tagline,
             'duration': int(data.get('runtime'))*60 or 0,
             'year': int(data.get('year') or 0),
-            'genre': u' / '.join(genre for genre in data.get('genres', [])) or None,
+            'genre': ' / '.join(genre for genre in data.get('genres', [])) or None,
             'code': data.get('imdb_id'),
             'imdbnumber': data.get('imdb_id'),
             'mpaa': data.get('certification'),

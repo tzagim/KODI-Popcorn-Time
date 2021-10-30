@@ -1,5 +1,5 @@
 import json
-import urllib2
+from urllib.request import Request, urlopen
 import os
 import xbmc
 import xbmcaddon
@@ -50,7 +50,7 @@ def _add_to_favs(mediatype, data):
     log("(Favourites) _add_to_favs %s" % favourites)
 
     string1 ={'action': 'watch_list', 'categ': 'movie_test', 'order': '-1'}
-    filename = 'movies.browse.%s' %hashlib.md5(str(string1)).hexdigest()
+    filename = 'movies.browse.%s' %hashlib.md5(str(string1).encode()).hexdigest()
     log("(Favourites) filename %s" % filename)
     try:
         os.remove(os.path.join(__addondir__, 'cache', filename))
@@ -70,7 +70,7 @@ def _remove_from_favs(mediatype, data):
     log("(Favourites) _remove_from_favs %s" % favourites)
 
     string1 ={'action': 'watch_list', 'categ': 'movie_test', 'order': '-1'}
-    filename = 'movies.browse.%s' %hashlib.md5(str(string1)).hexdigest()
+    filename = 'movies.browse.%s' %hashlib.md5(str(string1).encode()).hexdigest()
     log("(Favourites) filename %s" % filename)
     try:
         os.remove(os.path.join(__addondir__, 'cache', filename))
@@ -142,11 +142,11 @@ def _create_movie_favs():
     for fav in movie_favs:
         log("(Favourites_movie) %s" % fav)
         search = '%s/movie/%s' % ('https://popcorn-ru.tk', fav['id'])
-        req = urllib2.Request(search, headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.66 Safari/537.36", "Accept-Encoding": "none"})
-        response = urllib2.urlopen(req)
+        req = Request(search, headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.66 Safari/537.36", "Accept-Encoding": "none"})
+        response = urlopen(req)
         movie_fav = json.loads(response.read())
         movie_favs1.append(movie_fav)
         log("(Favourites_movie) %s" % movie_favs1)
-	with open(_json_movie_file, mode='w') as json_write:
-		json_write.write(json.dumps(movie_favs1))
-		log("(Favourites_movie) %s" % movie_favs1)
+    with open(_json_movie_file, mode='w') as json_write:
+        json_write.write(json.dumps(movie_favs1))
+        log("(Favourites_movie) %s" % movie_favs1)

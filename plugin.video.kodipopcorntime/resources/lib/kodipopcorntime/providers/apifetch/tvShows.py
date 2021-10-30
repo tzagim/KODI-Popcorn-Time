@@ -1,7 +1,7 @@
 import json
 import os
 import sys
-import urllib2
+from urllib.request import Request, urlopen
 
 from kodipopcorntime import settings
 from kodipopcorntime import favourites as _favs
@@ -232,8 +232,8 @@ def _favourites(dom, **kwargs):
     shows = []
     for fa in favs:
         search = '%s/show/%s' % (dom[0], fa['id'])
-        req = urllib2.Request(search, headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.66 Safari/537.36", "Accept-Encoding": "none"})
-        response = urllib2.urlopen(req)
+        req = Request(search, headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.66 Safari/537.36", "Accept-Encoding": "none"})
+        response = urlopen(req)
         show1 = json.loads(response.read())
 
         shows.append({
