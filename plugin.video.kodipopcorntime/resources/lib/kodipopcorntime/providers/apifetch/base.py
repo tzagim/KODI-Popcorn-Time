@@ -315,6 +315,6 @@ class BaseContentWithSeasons(BaseContent):
             if quality in settings.QUALITIES and torrent_url is not None:
                 torrents.update({
                     quality: torrent_url,
-                    '{0}size'.format(quality): 1000000000*60,
+                    '{0}size'.format(quality): 0,
                 })
         return torrents
