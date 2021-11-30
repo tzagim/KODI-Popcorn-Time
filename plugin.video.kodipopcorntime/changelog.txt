@@ -1,3 +1,8 @@
+v2.0.0
+- Correctly determine if there is enough free space
+- Require no free space to play a TV show episode
+- Make the add-on compatible with Kodi 19
+
 v1.7.6
 - Update API
 
