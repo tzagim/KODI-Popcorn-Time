@@ -35,5 +35,9 @@
         <description lang="pt_PT">With KODI Popcorn Time you can search for movies, TV shows and Animes that you can see immediately in KODI. NOTE: KODI Popcorn Time will continue sharing content while watching a movie TV show or Anime.</description>
         <description lang="pt_BR">With KODI Popcorn Time you can search for movies, TV shows and Animes that you can see immediately in KODI. NOTE: KODI Popcorn Time will continue sharing content while watching a movie TV show or Anime.</description>
         <description lang="sl_SI">Z KODI Popcorn Time lahko iščete Filme, TV Serije in Anime, ki si jih lahko takoj ogledaš v KODI-ju. OPOMBA: KODI Popcorn Time med ogledom filmov, TV Serij ter Anime deli video dalje tudi drugim uporabnikom.</description>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
     </extension>
 </addon>
