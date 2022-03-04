@@ -27,7 +27,7 @@ _proxy_identifier = 'api-fetch.proxies'
 def _getDomains():
     domains = [
         # Currently working, doesn't support anime yet
-        "https://popcorn-ru.tk"
+        "https://popcorn-time.ga"
     ]
 
     # User domains have highest priority
