@@ -1,7 +1,7 @@
 import json
 import os
 import sys
-import urllib2
+from urllib.request import Request, urlopen
 import xbmc
 import re
 
@@ -98,7 +98,7 @@ class Anime(BaseContentWithSeasons):
             "tvshowtitle": data[-1]['tvshow'],
             "duration": int(data[-1]['runtime'])*60,
             "status": data[-1]['status'],
-            "genre": u" / ".join(genre for genre in data[0].get("genres", [])) or None,
+            "genre": " / ".join(genre for genre in data[0].get("genres", [])) or None,
             "code": data[0].get("tvdb_id"),
             "plot": data[0]['overview'],
             "plotoutline": data[0]['overview']
@@ -217,8 +217,8 @@ def _favourites(dom, **kwargs):
     shows = []
     for fa in favs:
         search = '%s/anime/%s' % (dom[0], fa['id'])
-        req = urllib2.Request(search, headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.66 Safari/537.36", "Accept-Encoding": "none"})
-        response = urllib2.urlopen(req)
+        req = Request(search, headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.66 Safari/537.36", "Accept-Encoding": "none"})
+        response = urlopen(req)
         show1 = json.loads(response.read())
 
         shows.append({

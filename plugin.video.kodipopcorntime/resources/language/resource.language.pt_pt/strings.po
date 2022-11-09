@@ -1,0 +1,1025 @@
+# Kodi Media Center language file
+# Addon Name: KODI Popcorn Time
+# Addon id: plugin.video.kodipopcorntime
+# Addon Provider: lubo
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: https://forum.kodi.tv/\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Team-Kodi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30000"
+msgid "Show More"
+msgstr "Mostrar mais"
+
+msgctxt "#30001"
+msgid "KODI Popcorn Time - Search"
+msgstr "KODI Popcorn Time - Pesquisa"
+
+msgctxt "#30002"
+msgid "Search"
+msgstr "Pesquisar"
+
+msgctxt "#30003"
+msgid "Browse by Genre"
+msgstr "Navegar por género"
+
+msgctxt "#30004"
+msgid "Most Popular"
+msgstr "Populares"
+
+msgctxt "#30005"
+msgid "Best Rated"
+msgstr "Melhores classificados"
+
+msgctxt "#30006"
+msgid "Recently Added"
+msgstr "Adicionados recentemente"
+
+msgctxt "#30007"
+msgid "Fetching content"
+msgstr "A procurar conteúdo"
+
+msgctxt "#30008"
+msgid "Down: %s/s, Up: %s/s"
+msgstr "Down: %s/s, Up: %s/s"
+
+msgctxt "#30009"
+msgid "Play"
+msgstr "Reproduzir"
+
+msgctxt "#30010"
+msgid "Add-on settings"
+msgstr "Definições do Add-on"
+
+msgctxt "#30011"
+msgid "Do you want to play this movie in 3D?"
+msgstr "Deseja reproduzir este filme em 3D?"
+
+msgctxt "#30012"
+msgid "Subtitle:"
+msgstr "Legenda:"
+
+msgctxt "#30013"
+msgid "Are you sure you want to reset Torrent settings?"
+msgstr "Tem a certeza que deseja repor as definições do Torrent?"
+
+msgctxt "#30014"
+msgid "It is only the settings with "(Torrent)" in the headline, there are affected."
+msgstr "São apenas as definições com "(Torrent)" no cabeçalho, que são afectadas."
+
+msgctxt "#30015"
+msgid "Seeds: "
+msgstr "Sementes: "
+
+msgctxt "#30016"
+msgid "Fetching information"
+msgstr "A procurar informação"
+
+msgctxt "#30017"
+msgid "Done"
+msgstr "Concluído"
+
+msgctxt "#30018"
+msgid "Fetching information"
+msgstr "A procurar informação"
+
+msgctxt "#30019"
+msgid "Downloading subtitle"
+msgstr "A descarregar legenda"
+
+msgctxt "#30020"
+msgid "Starting playback"
+msgstr "A iniciar reprodução"
+
+msgctxt "#30021"
+msgid "Downloading"
+msgstr "A descarregar"
+
+msgctxt "#30022"
+msgid "Download is complete"
+msgstr "A descarga foi completa"
+
+msgctxt "#30023"
+msgid "The quality was not found"
+msgstr "A qualidade não foi encontrada"
+
+msgctxt "#30024"
+msgid "Attempt "
+msgstr "Tentativa "
+
+msgctxt "#30025"
+msgid "Sort by Title"
+msgstr "Organizar por Título"
+
+msgctxt "#30026"
+msgid "Sort by Year"
+msgstr "Organizar por Ano"
+
+msgctxt "#30027"
+msgid "Last Updated"
+msgstr "Última actualização"
+
+msgctxt "#30028"
+msgid "Searching"
+msgstr "A pesquisar"
+
+msgctxt "#30029"
+msgid "Favourites"
+msgstr "Favoritos"
+
+msgctxt "#30030"
+msgid "Movies"
+msgstr "Filmes"
+
+msgctxt "#30031"
+msgid "Starting"
+msgstr "A começar"
+
+msgctxt "#30032"
+msgid "Watch Later"
+msgstr "Ver mais tarde"
+
+msgctxt "#30033"
+msgid "Are you sure you want to delete the cache?"
+msgstr "Tem a certeza que deseja apagar o cache?"
+
+msgctxt "#30034"
+msgid "Title:"
+msgstr "Título:"
+
+msgctxt "#30035"
+msgid "New title:"
+msgstr "Título traduzido:"
+
+msgctxt "#30036"
+msgid "Waiting"
+msgstr "A aguardar"
+
+msgctxt "#30037"
+msgid "Checking data"
+msgstr "A verificar informação"
+
+msgctxt "#30038"
+msgid "Trailer"
+msgstr "Trailer"
+
+msgctxt "#30039"
+msgid "Add to Popcorn Favourites"
+msgstr "Adicionar aos Favoritos do Popcorn"
+
+msgctxt "#30040"
+msgid "Remove from Popcorn Favourites"
+msgstr "Remover dos Favoritos do Popcorn"
+
+msgctxt "#30041"
+msgid "Add to Watch Later list"
+msgstr "Adicionar á lista Ver mais tarde"
+
+msgctxt "#30042"
+msgid "Remove from Watch Later list"
+msgstr "Remover da lista Ver mais tarde"
+
+msgctxt "#30043"
+msgid "Remove all from Popcorn Favourites"
+msgstr "Remover tudo dos Favoritos do Popcorn"
+
+msgctxt "#30044"
+msgid "Remove all from Watch Later list"
+msgstr "Remover tudo da lista Ver mais tarde"
+
+msgctxt "#30101"
+msgid "Clear media files"
+msgstr "Limpar ficheiros multimédia"
+
+msgctxt "#30102"
+msgid "Files"
+msgstr "Ficheiros"
+
+msgctxt "#30103"
+msgid "Download Path"
+msgstr "Local da descarga"
+
+msgctxt "#30104"
+msgid "Keep files after playback/download stops"
+msgstr "Manter ficheiros após reprodução/descarga parar"
+
+msgctxt "#30105"
+msgid "Subtitles"
+msgstr "Legendas"
+
+msgctxt "#30106"
+msgid "720p and lower"
+msgstr "720p e inferior"
+
+msgctxt "#30107"
+msgid "Prefer"
+msgstr "Preferir"
+
+msgctxt "#30108"
+msgid "Network"
+msgstr "Rede"
+
+msgctxt "#30109"
+msgid "Play 3D video"
+msgstr "Reproduzir vídeo 3D"
+
+msgctxt "#30110"
+msgid "Max Download Rate (Kilobyte - 0: Unlimited)"
+msgstr "Taxa máxima de descarga (Kilobyte - 0: Ilimitado)"
+
+msgctxt "#30111"
+msgid "Encryption"
+msgstr "Encriptação"
+
+msgctxt "#30112"
+msgid "Global"
+msgstr "Geral"
+
+msgctxt "#30113"
+msgid "Maintenance"
+msgstr "Manutenção"
+
+msgctxt "#30114"
+msgid "Clear media information"
+msgstr "Apagar informação multimédia"
+
+msgctxt "#30115"
+msgid "Proxy domains"
+msgstr "Domínios de Proxy"
+
+msgctxt "#30116"
+msgid "Movies (comma-separated hosts)"
+msgstr "Filmes (hosts separados por vírgula)"
+
+msgctxt "#30117"
+msgid "Video Quality"
+msgstr "Qualidade do Vídeo"
+
+msgctxt "#30118"
+msgid "1080p and lower"
+msgstr "1080p e inferior"
+
+msgctxt "#30119"
+msgid "First priority"
+msgstr "Primeira prioridade"
+
+msgctxt "#30120"
+msgid "Second priority"
+msgstr "Segunda prioridade"
+
+msgctxt "#30121"
+msgid "Third priority"
+msgstr "Terceira prioridade"
+
+msgctxt "#30122"
+msgid "Max Upload Rate (Kilobyte - 0: Unlimited - Min 15 kB/s)"
+msgstr "Taxa máxima de envio (Kilobyte - 0: Ilimitado - Min 15 kB/s)"
+
+msgctxt "#30123"
+msgid "Forced"
+msgstr "Forçada"
+
+msgctxt "#30124"
+msgid "Enabled"
+msgstr "Activada"
+
+msgctxt "#30125"
+msgid "Disabled"
+msgstr "Desactivada"
+
+msgctxt "#30126"
+msgid "No"
+msgstr "Não"
+
+msgctxt "#30127"
+msgid "Ask me"
+msgstr "Perguntar-me"
+
+msgctxt "#30128"
+msgid "Always"
+msgstr "Sempre"
+
+msgctxt "#30129"
+msgid "TV Shows (comma-separated hosts)"
+msgstr "Séries (hosts separados por vírgula)"
+
+msgctxt "#30130"
+msgid "Advanced"
+msgstr "Avançado"
+
+msgctxt "#30131"
+msgid "Torrent settings"
+msgstr "Definições de Torrent"
+
+msgctxt "#30132"
+msgid "Providers"
+msgstr "Fornecedores"
+
+msgctxt "#30133"
+msgid "Peers (Torrent)"
+msgstr "Pares (Torrent)"
+
+msgctxt "#30134"
+msgid "Features (Torrent)"
+msgstr "Recursos (Torrent)"
+
+msgctxt "#30135"
+msgid "Log / debug"
+msgstr "Log / debug"
+
+msgctxt "#30136"
+msgid "Keep only incomplete files after exiting"
+msgstr "Manter apenas ficheiros incompletos após sair"
+
+msgctxt "#30137"
+msgid "Keep only complete files after exiting"
+msgstr "Manter apenas ficheiros completos após sair"
+
+msgctxt "#30138"
+msgid "Additional (Torrent)"
+msgstr "Adicional (Torrent)"
+
+msgctxt "#30139"
+msgid "Port for incoming connections"
+msgstr "Porta para conexões de entrada"
+
+msgctxt "#30140"
+msgid "Use random port (49152-65535)"
+msgstr "Usar porta aleatória (49152-65535)"
+
+msgctxt "#30141"
+msgid "Enable TCP protocol"
+msgstr "Activar protocolo TCP"
+
+msgctxt "#30142"
+msgid "Enable uTP (uTorrent Transport Protocol)"
+msgstr "Activar uTP (uTorrent Transport Protocol)"
+
+msgctxt "#30143"
+msgid "The limit of the total number of connections"
+msgstr "O limite do número total de conexões"
+
+msgctxt "#30144"
+msgid "Reset"
+msgstr "Repor"
+
+msgctxt "#30145"
+msgid "The number of peers who try to connect after the initial response"
+msgstr "O número de pares que tentam se conectar após a resposta inicial"
+
+msgctxt "#30146"
+msgid "The total number of connection attempts per second"
+msgstr "O número total de tentativas de conexão por segundo"
+
+msgctxt "#30147"
+msgid "Number of seconds before the connection attempt failed"
+msgstr "Número de segundos antes da tentativa de conexão falhar"
+
+msgctxt "#30149"
+msgid "Number of seconds to wait between connection failures"
+msgstr "Número de segundos para esperar entre falhas de conexão"
+
+msgctxt "#30150"
+msgid "Number of failure attempts before peer will be discarded"
+msgstr "Número de tentativas de falha antes que o par seja descartado"
+
+msgctxt "#30151"
+msgid "Enable DHT (Distributed Hash Table)"
+msgstr "Activar DHT (Distributed Hash Table)"
+
+msgctxt "#30152"
+msgid "Enable LSD (Local Service Discovery)"
+msgstr "Activar LSD (Local Service Discovery)"
+
+msgctxt "#30153"
+msgid "Enable NATPMP (NAT Port Mapping Protocol)"
+msgstr "Activar NATPMP (NAT Port Mapping Protocol)"
+
+msgctxt "#30154"
+msgid "Enable UPnP (Universal Plug and Play)"
+msgstr "Activar UPnP (Universal Plug and Play)"
+
+msgctxt "#30155"
+msgid "Enable sending scrape request to tracker (Tracker Scrape)"
+msgstr "Activar pedidos de scrape para o tracker (Tracker Scrape)"
+
+msgctxt "#30156"
+msgid "Trackers (comma-separated URLs)"
+msgstr "Trackers (URLs separadas por vírgula)"
+
+msgctxt "#30157"
+msgid "DHT routers (comma-separated host:port pairs)"
+msgstr "DHT routers (separado por vírgula host:port pares)"
+
+msgctxt "#30158"
+msgid "Enable debugging"
+msgstr "Activar debugging"
+
+msgctxt "#30159"
+msgid "Network (Torrent)"
+msgstr "Rede (Torrent)"
+
+msgctxt "#30160"
+msgid "Search"
+msgstr "Pesquisar"
+
+msgctxt "#30162"
+msgid "Movie"
+msgstr "Filme"
+
+msgctxt "#30163"
+msgid "TV Shows"
+msgstr "Séries"
+
+msgctxt "#30164"
+msgid "Prioritize Hearing Impaired Subtitles"
+msgstr "Priorizar legendas com deficiência auditiva"
+
+msgctxt "#30165"
+msgid "Gather movie information from"
+msgstr "Obter informações do filme a partir de"
+
+msgctxt "#30168"
+msgid "Get subtitles from"
+msgstr "Obter legendas a partir de"
+
+msgctxt "#30169"
+msgid "Gather TV information from"
+msgstr "Obter informações da TV de"
+
+msgctxt "#30170"
+msgid "None"
+msgstr "Nenhuma"
+
+msgctxt "#30171"
+msgid "The Movie Database"
+msgstr "The Movie Database"
+
+msgctxt "#30172"
+msgid "YIFY Subtitles"
+msgstr "YIFY Subtitles"
+
+msgctxt "#30173"
+msgid "Only 480p"
+msgstr "Apenas 480p"
+
+msgctxt "#30174"
+msgid "Video"
+msgstr "Video"
+
+msgctxt "#30201"
+msgid "Albanian"
+msgstr "Albanês"
+
+msgctxt "#30202"
+msgid "Arabic"
+msgstr "Árabe"
+
+msgctxt "#30203"
+msgid "Bengali"
+msgstr "Bengali"
+
+msgctxt "#30204"
+msgid "Brazilian Portuguese"
+msgstr "Português do Brasil"
+
+msgctxt "#30205"
+msgid "Bulgarian"
+msgstr "Búlgaro"
+
+msgctxt "#30206"
+msgid "Chinese"
+msgstr "Chinês"
+
+msgctxt "#30207"
+msgid "Croatian"
+msgstr "Croato"
+
+msgctxt "#30208"
+msgid "Czech"
+msgstr "Checo"
+
+msgctxt "#30209"
+msgid "Danish"
+msgstr "Dinamarquês"
+
+msgctxt "#30210"
+msgid "Dutch"
+msgstr "Holandês"
+
+msgctxt "#30211"
+msgid "English"
+msgstr "Inglês"
+
+msgctxt "#30212"
+msgid "Farsi/Persian"
+msgstr "Perso"
+
+msgctxt "#30213"
+msgid "Finnish"
+msgstr "Finlandês"
+
+msgctxt "#30214"
+msgid "French"
+msgstr "Francês"
+
+msgctxt "#30215"
+msgid "German"
+msgstr "Alemão"
+
+msgctxt "#30216"
+msgid "Greek"
+msgstr "Grego"
+
+msgctxt "#30217"
+msgid "Hebrew"
+msgstr "Hebraico"
+
+msgctxt "#30218"
+msgid "Hungarian"
+msgstr "Húngaro"
+
+msgctxt "#30219"
+msgid "Indonesian"
+msgstr "Indonésio"
+
+msgctxt "#30220"
+msgid "Italian"
+msgstr "Italiano"
+
+msgctxt "#30221"
+msgid "Japanese"
+msgstr "Japonês"
+
+msgctxt "#30222"
+msgid "Korean"
+msgstr "Coreano"
+
+msgctxt "#30223"
+msgid "Lithuanian"
+msgstr "Lituano"
+
+msgctxt "#30224"
+msgid "Macedonian"
+msgstr "Macedónio"
+
+msgctxt "#30225"
+msgid "Malay"
+msgstr "Malaio"
+
+msgctxt "#30226"
+msgid "Norwegian"
+msgstr "Norueguês"
+
+msgctxt "#30227"
+msgid "Polish"
+msgstr "Polonês"
+
+msgctxt "#30228"
+msgid "Portuguese"
+msgstr "Português"
+
+msgctxt "#30229"
+msgid "Romanian"
+msgstr "Romeno"
+
+msgctxt "#30230"
+msgid "Russian"
+msgstr "Russo"
+
+msgctxt "#30231"
+msgid "Serbian"
+msgstr "Sérvio"
+
+msgctxt "#30232"
+msgid "Slovenian"
+msgstr "Esloveno"
+
+msgctxt "#30233"
+msgid "Spanish"
+msgstr "Espanhol"
+
+msgctxt "#30234"
+msgid "Swedish"
+msgstr "Sueco"
+
+msgctxt "#30235"
+msgid "Thai"
+msgstr "Tailandês"
+
+msgctxt "#30236"
+msgid "Turkish"
+msgstr "Turco"
+
+msgctxt "#30237"
+msgid "Urdu"
+msgstr "Urdu"
+
+msgctxt "#30238"
+msgid "Vietnamese"
+msgstr "Vietnamita"
+
+msgctxt "#30300"
+msgid "Cannot find port to bind torrent2http"
+msgstr "Não foi possível encontrar a porta para ligar torrent2http"
+
+msgctxt "#30301"
+msgid "Cache cleared"
+msgstr "Cache foi limpo"
+
+msgctxt "#30302"
+msgid "Your OS is not supported"
+msgstr "O seu Sistema Operativo não é suportado"
+
+msgctxt "#30304"
+msgid "Did not receive any data"
+msgstr "Não recebeu nenhum dado"
+
+msgctxt "#30305"
+msgid "Did not receive any movies"
+msgstr "Não recebeu nenhum filme"
+
+msgctxt "#30308"
+msgid "An unknown error has occurred"
+msgstr "Um erro desconhecido ocorreu"
+
+msgctxt "#30310"
+msgid "Download path does not exist. Please check your addon settings"
+msgstr "O caminho de descarga não existe. Por favor verifique nas definições do addon"
+
+msgctxt "#30313"
+msgid "A torrent error has occurred"
+msgstr "Um erro de torrent ocorreu"
+
+msgctxt "#30314"
+msgid "Torrent settings were reset"
+msgstr "Definições do Torrent foram repostas"
+
+msgctxt "#30315"
+msgid "No movie or tv-show providers were found"
+msgstr "No movie or tv-show providers were found"
+
+msgctxt "#30316"
+msgid "Torrent file did not contain a movie"
+msgstr "O ficheiro Torrent não contém nenhum filme"
+
+msgctxt "#30317"
+msgid "A connection has not answered before timeout"
+msgstr "Uma conexão não respondeu antes do tempo limite"
+
+msgctxt "#30318"
+msgid "Playback is terminated due to timeout"
+msgstr "A reprodução parou devido ao tempo limite"
+
+msgctxt "#30319"
+msgid "Downloading to an unmounted network share is not supported. Please check your addon settings"
+msgstr "A descarga para um compartilhamento de rede desmontado não é suportado. Por favor verifique nas definições do addon"
+
+msgctxt "#30320"
+msgid "Cannot find torrent2http"
+msgstr "Não foi possível encontrar torrent2http"
+
+msgctxt "#30321"
+msgid "Cannot make torrent2http executable"
+msgstr "Não foi possível executar torrent2http"
+
+msgctxt "#30322"
+msgid "Unable to create cache directory"
+msgstr "Não foi possível criar o diretório de cache"
+
+msgctxt "#30323"
+msgid "There is not enough free space to play. Please free up some space or choose a different download location"
+msgstr "Não há espaço suficiente para reproduzir. Por favor liberte algum espaço ou escolha outra localização para a descarga"
+
+msgctxt "#30324"
+msgid "Max Upload Rate must be above 15 Kilobytes per second. Please go to the addon settings and set a minimum speed of 15 kilobytes per second"
+msgstr "A taxa máxima de Envio tem que ser superior a 15 Kilobytes por segundo. Por favor verifique nas definições do addon"
+
+msgctxt "#30325"
+msgid "You need more space to play %s and %s qualities or choose a lower quality"
+msgstr "Precisa de mais espaço para reproduzir %s e %s qualidade ou escolha outra qualidade inferior"
+
+msgctxt "#30326"
+msgid "You need more space to play %s quality or choose a lower quality"
+msgstr "Precisa de mais espaço para reproduzir %s qualidade ou escolha outra qualidade inferior"
+
+msgctxt "#30327"
+msgid "No results found"
+msgstr "Nenhum resultado encontrado"
+
+msgctxt "#30328"
+msgid "Could not receive a media list as there was no domains that worked"
+msgstr "Não foi possível receber uma lista de mídia, pois não havia domínios que funcionassem"
+
+msgctxt "#30329"
+msgid "There was an error with the response from the provider"
+msgstr "Ocorreu um erro com a resposta do fornecedor"
+
+msgctxt "#30350"
+msgid "Movies"
+msgstr "Filmes"
+
+msgctxt "#30351"
+msgid "TV-Shows"
+msgstr "Séries"
+
+msgctxt "#30352"
+msgid "Anime"
+msgstr "Anime"
+
+msgctxt "#30353"
+msgid "30350,30351,30352"
+msgstr "30350,30351,30352"
+
+msgctxt "#30400"
+msgid "Action"
+msgstr "Ação"
+
+msgctxt "#30401"
+msgid "Adventure"
+msgstr "Aventura"
+
+msgctxt "#30402"
+msgid "Animation"
+msgstr "Animação"
+
+msgctxt "#30403"
+msgid "Comedy"
+msgstr "Comédia"
+
+msgctxt "#30404"
+msgid "Crime"
+msgstr "Crime"
+
+msgctxt "#30405"
+msgid "Disaster"
+msgstr "Desastres"
+
+msgctxt "#30406"
+msgid "Documentary"
+msgstr "Documentário"
+
+msgctxt "#30407"
+msgid "Drama"
+msgstr "Drama"
+
+msgctxt "#30408"
+msgid "Eastern"
+msgstr "Oriental"
+
+msgctxt "#30409"
+msgid "Family"
+msgstr "Família"
+
+msgctxt "#30410"
+msgid "Fan-Film"
+msgstr "Filme de fâs"
+
+msgctxt "#30411"
+msgid "Fantasy"
+msgstr "Fantasia"
+
+msgctxt "#30412"
+msgid "Film-Noir"
+msgstr "Film-Noir"
+
+msgctxt "#30413"
+msgid "History"
+msgstr "Histórico"
+
+msgctxt "#30414"
+msgid "Horror"
+msgstr "Terror"
+
+msgctxt "#30415"
+msgid "Indie"
+msgstr "Indie"
+
+msgctxt "#30416"
+msgid "Music"
+msgstr "Música"
+
+msgctxt "#30417"
+msgid "Mystery"
+msgstr "Mistério"
+
+msgctxt "#30418"
+msgid "Road"
+msgstr "Estrada"
+
+msgctxt "#30419"
+msgid "Romance"
+msgstr "Romance"
+
+msgctxt "#30420"
+msgid "Sci-Fi"
+msgstr "Ficção científica"
+
+msgctxt "#30421"
+msgid "Short"
+msgstr "Curto"
+
+msgctxt "#30422"
+msgid "Sport"
+msgstr "Desporto"
+
+msgctxt "#30423"
+msgid "Sporting-event"
+msgstr "Evento desportivo"
+
+msgctxt "#30424"
+msgid "Suspence"
+msgstr "Suspence"
+
+msgctxt "#30425"
+msgid "Thriller"
+msgstr "Thriller"
+
+msgctxt "#30426"
+msgid "TV-Movie"
+msgstr "TV-Movie"
+
+msgctxt "#30427"
+msgid "War"
+msgstr "Guerra"
+
+msgctxt "#30428"
+msgid "Western"
+msgstr "Ocidental"
+
+msgctxt "#30450"
+msgid "Action"
+msgstr "Ação"
+
+msgctxt "#30451"
+msgid "Ecchi"
+msgstr "Ecchi"
+
+msgctxt "#30452"
+msgid "Harem"
+msgstr "Harem"
+
+msgctxt "#30453"
+msgid "Romance"
+msgstr "Romance"
+
+msgctxt "#30454"
+msgid "School"
+msgstr "Escola"
+
+msgctxt "#30455"
+msgid "Supernatural"
+msgstr "Sobrenatural"
+
+msgctxt "#30456"
+msgid "Drama"
+msgstr "Drama"
+
+msgctxt "#30457"
+msgid "Comedy"
+msgstr "Comédia"
+
+msgctxt "#30458"
+msgid "Mystery"
+msgstr "Mistério"
+
+msgctxt "#30459"
+msgid "Police"
+msgstr "Polícia"
+
+msgctxt "#30461"
+msgid "Sports"
+msgstr "Desporto"
+
+msgctxt "#30462"
+msgid "Mecha"
+msgstr "Mecha"
+
+msgctxt "#30463"
+msgid "Sci-Fi"
+msgstr "Ficção científica"
+
+msgctxt "#30464"
+msgid "Slice of Life"
+msgstr "Slice of Life"
+
+msgctxt "#30465"
+msgid "Fantasy"
+msgstr "Fantasia"
+
+msgctxt "#30466"
+msgid "Adventure"
+msgstr "Aventura"
+
+msgctxt "#30467"
+msgid "Gore"
+msgstr "Gore"
+
+msgctxt "#30468"
+msgid "Music"
+msgstr "Música"
+
+msgctxt "#30469"
+msgid "Psychological"
+msgstr "Psicológico"
+
+msgctxt "#30470"
+msgid "Shoujo Ai"
+msgstr "Shoujo Ai"
+
+msgctxt "#30471"
+msgid "Yuri"
+msgstr "Yuri"
+
+msgctxt "#30472"
+msgid "Magic"
+msgstr "Mágico"
+
+msgctxt "#30473"
+msgid "Horror"
+msgstr "Terror"
+
+msgctxt "#30474"
+msgid "Thriller"
+msgstr "Thriller"
+
+msgctxt "#30475"
+msgid "Gender Bender"
+msgstr "Gender Bender"
+
+msgctxt "#30476"
+msgid "Parody"
+msgstr "Paródia"
+
+msgctxt "#30477"
+msgid "Historical"
+msgstr "Histórico"
+
+msgctxt "#30478"
+msgid "Racing"
+msgstr "Corridas"
+
+msgctxt "#30479"
+msgid "Samurai"
+msgstr "Samurai"
+
+msgctxt "#30480"
+msgid "Super Power"
+msgstr "Super Power"
+
+msgctxt "#30481"
+msgid "Military"
+msgstr "Militar"
+
+msgctxt "#30482"
+msgid "Dementia"
+msgstr "Demência"
+
+msgctxt "#30483"
+msgid "Mahou Shounen"
+msgstr "Mahou Shounen"
+
+msgctxt "#30484"
+msgid "Game"
+msgstr "Jogo"
+
+msgctxt "#30485"
+msgid "Martial Arts"
+msgstr "Artes Marciais"
+
+msgctxt "#30486"
+msgid "Vampire"
+msgstr "Vampiro"
+
+msgctxt "#30487"
+msgid "Kids"
+msgstr "Crianças"
+
+msgctxt "#30488"
+msgid "Mahou Shoujo"
+msgstr "Mahou Shoujo"
+
+msgctxt "#30489"
+msgid "Space"
+msgstr "Espaço"
+
+msgctxt "#30490"
+msgid "Shounen Ai"
+msgstr "Shounen Ai"
+
+msgctxt "#30498"
+msgid "30450,30451,30452,30453,30454,30455,30456,30457,30458,30459,30461,30462,30463,30464,30465,30466,30467,30468,30469,30470,30471,30472,30473,30474,30475,30476,30477,30478,30479,30480,30481,30482,30483,30484,30485,30486,30487,30488,30489,30490"
+msgstr "30450,30451,30452,30453,30454,30455,30456,30457,30458,30459,30461,30462,30463,30464,30465,30466,30467,30468,30469,30470,30471,30472,30473,30474,30475,30476,30477,30478,30479,30480,30481,30482,30483,30484,30485,30486,30487,30488,30489,30490"
+
+msgctxt "#30499"
+msgid "30400,30401,30402,30403,30404,30405,30406,30407,30408,30409,30410,30411,30412,30413,30414,30415,30416,30417,30418,30419,30420,30421,30422,30423,30424,30425,30426,30427,30428"
+msgstr "30400,30401,30402,30403,30404,30405,30406,30407,30408,30409,30410,30411,30412,30413,30414,30415,30416,30417,30418,30419,30420,30421,30422,30423,30424,30425,30426,30427,30428"

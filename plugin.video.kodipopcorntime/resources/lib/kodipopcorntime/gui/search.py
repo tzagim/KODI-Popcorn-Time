@@ -26,8 +26,8 @@ class Search(_Base3):
     def show(self, **params):
         log("(Search) Creating view", LOGLEVEL.INFO)
         searchString = self.getSearchString()
-
         curPageNum = self.getCurPageNum()
+        monitor = xbmc.Monitor()
         with closing(Cache("%s.search.query" %self.mediaSettings.mediaType, ttl=24 * 3600, last_changed=self.mediaSettings.lastchanged)) as cache:
             # Reset cache when we have different search string
             if cache and not searchString == cache['searchString']:
@@ -53,7 +53,7 @@ class Search(_Base3):
                     log("(Search) Getting item list")
                     with closing(media.List(self.mediaSettings, 'search', *(searchString, curPageNum,), **params)) as medialist:
                         while not medialist.is_done(0.100):
-                            if xbmc.abortRequested or dialog.iscanceled():
+                            if monitor.abortRequested() or dialog.iscanceled():
                                 raise Abort()
                             attempts = medialist.attempts()
                             if attempts > 1:
@@ -84,7 +84,7 @@ class Search(_Base3):
                         [mediadata.submit(item) for item in items]
                         mediadata.start()
                         while not mediadata.is_done(0.100):
-                            if xbmc.abortRequested or dialog.iscanceled():
+                            if monitor.abortRequested() or dialog.iscanceled():
                                 raise Abort()
                         items = mediadata.get_data()
                         if not items:

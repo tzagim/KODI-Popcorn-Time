@@ -1,0 +1,1025 @@
+# Kodi Media Center language file
+# Addon Name: KODI Popcorn Time
+# Addon id: plugin.video.kodipopcorntime
+# Addon Provider: lubo
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: https://forum.kodi.tv/\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Team-Kodi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sl_SI\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+msgctxt "#30000"
+msgid "Show More"
+msgstr "Prikaži več"
+
+msgctxt "#30001"
+msgid "KODI Popcorn Time - Search"
+msgstr "KODI Popcorn Time - Iskanje"
+
+msgctxt "#30002"
+msgid "Search"
+msgstr "Iskanje"
+
+msgctxt "#30003"
+msgid "Browse by Genre"
+msgstr "Brskaj po Žanru"
+
+msgctxt "#30004"
+msgid "Most Popular"
+msgstr "Najbolj Popularno"
+
+msgctxt "#30005"
+msgid "Best Rated"
+msgstr "Najbolje Ocenjeno"
+
+msgctxt "#30006"
+msgid "Recently Added"
+msgstr "Nazadnje Dodano"
+
+msgctxt "#30007"
+msgid "Fetching content"
+msgstr "Pridobivanje vsebine"
+
+msgctxt "#30008"
+msgid "Down: %s/s, Up: %s/s"
+msgstr "Pobiranje: %s/s, Nalaganje: %s/s"
+
+msgctxt "#30009"
+msgid "Play"
+msgstr "Predvajaj"
+
+msgctxt "#30010"
+msgid "Add-on settings"
+msgstr "Add-on nastavitve"
+
+msgctxt "#30011"
+msgid "Do you want to play this movie in 3D?"
+msgstr "Predvajaj v 3d?"
+
+msgctxt "#30012"
+msgid "Subtitle:"
+msgstr "Podnapisi:"
+
+msgctxt "#30013"
+msgid "Are you sure you want to reset Torrent settings?"
+msgstr "Resetiram Torrent nastavitve?"
+
+msgctxt "#30014"
+msgid "It is only the settings with "(Torrent)" in the headline, there are affected."
+msgstr "Vpliva le na Torrent nastavitve."
+
+msgctxt "#30015"
+msgid "Seeds: "
+msgstr "Semena: "
+
+msgctxt "#30016"
+msgid "Fetching information"
+msgstr "Pridobivanje informacij"
+
+msgctxt "#30017"
+msgid "Done"
+msgstr "Končano"
+
+msgctxt "#30018"
+msgid "Fetching information"
+msgstr "Pridobivanje informacij"
+
+msgctxt "#30019"
+msgid "Downloading subtitle"
+msgstr "Pobiranje podnapisov"
+
+msgctxt "#30020"
+msgid "Starting playback"
+msgstr "Pričetek predvajanja"
+
+msgctxt "#30021"
+msgid "Downloading"
+msgstr "Pobiranje"
+
+msgctxt "#30022"
+msgid "Download is complete"
+msgstr "Pobiranje je končano"
+
+msgctxt "#30023"
+msgid "The quality was not found"
+msgstr "Kvaliteta videa ni najdena"
+
+msgctxt "#30024"
+msgid "Attempt "
+msgstr "Poskus "
+
+msgctxt "#30025"
+msgid "Sort by Title"
+msgstr "Razvrsti po Naslovu"
+
+msgctxt "#30026"
+msgid "Sort by Year"
+msgstr "Razvrsti po Letih"
+
+msgctxt "#30027"
+msgid "Last Updated"
+msgstr "Nazadnje posodobljeno"
+
+msgctxt "#30028"
+msgid "Searching"
+msgstr "Iskanje"
+
+msgctxt "#30029"
+msgid "Favourites"
+msgstr "Priljubljene"
+
+msgctxt "#30030"
+msgid "Movies"
+msgstr "Filmi"
+
+msgctxt "#30031"
+msgid "Starting"
+msgstr "Začetek"
+
+msgctxt "#30032"
+msgid "Watch Later"
+msgstr "Poglej Kasneje"
+
+msgctxt "#30033"
+msgid "Are you sure you want to delete the cache?"
+msgstr "Ali si prepričan da pobrišem predpomnilnik?"
+
+msgctxt "#30034"
+msgid "Title:"
+msgstr "Naslov:"
+
+msgctxt "#30035"
+msgid "New title:"
+msgstr "Nov Naslov:"
+
+msgctxt "#30036"
+msgid "Waiting"
+msgstr "Čakanje"
+
+msgctxt "#30037"
+msgid "Checking data"
+msgstr "Preverba podatkov"
+
+msgctxt "#30038"
+msgid "Trailer"
+msgstr "Napovednik"
+
+msgctxt "#30039"
+msgid "Add to Popcorn Favourites"
+msgstr "Dodaj v Popcorn priljubljene"
+
+msgctxt "#30040"
+msgid "Remove from Popcorn Favourites"
+msgstr "Odstrani iz Popcorn priljubljenih"
+
+msgctxt "#30041"
+msgid "Add to Watch Later list"
+msgstr "Dodaj v Oglej Kasneje"
+
+msgctxt "#30042"
+msgid "Remove from Watch Later list"
+msgstr "Odstrani iz Oglej Kasneje"
+
+msgctxt "#30043"
+msgid "Remove all from Popcorn Favourites"
+msgstr "Odstrani vse iz Popcorn priljubljenih"
+
+msgctxt "#30044"
+msgid "Remove all from Watch Later list"
+msgstr "Odstrani vse iz Oglej Kasneje"
+
+msgctxt "#30101"
+msgid "Clear media files"
+msgstr "pobriši media vsebine"
+
+msgctxt "#30102"
+msgid "Files"
+msgstr "Datoteke"
+
+msgctxt "#30103"
+msgid "Download Path"
+msgstr "Mapa prenosa"
+
+msgctxt "#30104"
+msgid "Keep files after playback/download stops"
+msgstr "Obdrži datoteke po koncu predvajanja/prenosa."
+
+msgctxt "#30105"
+msgid "Subtitles"
+msgstr "Podnapisi"
+
+msgctxt "#30106"
+msgid "720p and lower"
+msgstr "720p ter nižja"
+
+msgctxt "#30107"
+msgid "Prefer"
+msgstr "Prednostno"
+
+msgctxt "#30108"
+msgid "Network"
+msgstr "Omrežje"
+
+msgctxt "#30109"
+msgid "Play 3D video"
+msgstr "Predvajaj 3D vsebino"
+
+msgctxt "#30110"
+msgid "Max Download Rate (Kilobyte - 0: Unlimited)"
+msgstr "Največja hitrost prenašanja (Kilobyte - 0: Neomejeno)"
+
+msgctxt "#30111"
+msgid "Encryption"
+msgstr "Enkripcija"
+
+msgctxt "#30112"
+msgid "Global"
+msgstr "Globalno"
+
+msgctxt "#30113"
+msgid "Maintenance"
+msgstr "Vzdrževanje"
+
+msgctxt "#30114"
+msgid "Clear media information"
+msgstr "Brisanje medija informacij"
+
+msgctxt "#30115"
+msgid "Proxy domains"
+msgstr "Proxy domene"
+
+msgctxt "#30116"
+msgid "Movies (comma-separated hosts)"
+msgstr "Filmi (gostitelji ločeni z vejico)"
+
+msgctxt "#30117"
+msgid "Video Quality"
+msgstr "Kvalitea videa"
+
+msgctxt "#30118"
+msgid "1080p and lower"
+msgstr "1080p ter nižja"
+
+msgctxt "#30119"
+msgid "First priority"
+msgstr "Prva prioriteta"
+
+msgctxt "#30120"
+msgid "Second priority"
+msgstr "Druga prioriteta"
+
+msgctxt "#30121"
+msgid "Third priority"
+msgstr "Tretja prioriteta"
+
+msgctxt "#30122"
+msgid "Max Upload Rate (Kilobyte - 0: Unlimited - Min 15 kB/s)"
+msgstr "Maksimalna hitrost deljenja (Kilobyte - 0: Neomojeno - Min 15 kB/s)"
+
+msgctxt "#30123"
+msgid "Forced"
+msgstr "Prisiljeno"
+
+msgctxt "#30124"
+msgid "Enabled"
+msgstr "Vklopljeno"
+
+msgctxt "#30125"
+msgid "Disabled"
+msgstr "Izklopljeno"
+
+msgctxt "#30126"
+msgid "No"
+msgstr "Ne"
+
+msgctxt "#30127"
+msgid "Ask me"
+msgstr "Vedno vprašaj"
+
+msgctxt "#30128"
+msgid "Always"
+msgstr "Vedno"
+
+msgctxt "#30129"
+msgid "TV Shows (comma-separated hosts)"
+msgstr "TV Serije (gostitelji ločeni z vejico)"
+
+msgctxt "#30130"
+msgid "Advanced"
+msgstr "Napredno"
+
+msgctxt "#30131"
+msgid "Torrent settings"
+msgstr "Torrent nastavitve"
+
+msgctxt "#30132"
+msgid "Providers"
+msgstr "Ponudniki"
+
+msgctxt "#30133"
+msgid "Peers (Torrent)"
+msgstr "Vrstniki (Torrent)"
+
+msgctxt "#30134"
+msgid "Features (Torrent)"
+msgstr "Lastnosti (Torrent)"
+
+msgctxt "#30135"
+msgid "Log / debug"
+msgstr "Log / razhroščevanje"
+
+msgctxt "#30136"
+msgid "Keep only incomplete files after exiting"
+msgstr "Obdrži samo nedokončane"
+
+msgctxt "#30137"
+msgid "Keep only complete files after exiting"
+msgstr "Obdrži samo dokončane"
+
+msgctxt "#30138"
+msgid "Additional (Torrent)"
+msgstr "Dodatno (Torrent)"
+
+msgctxt "#30139"
+msgid "Port for incoming connections"
+msgstr "Vrata vhodne povezave"
+
+msgctxt "#30140"
+msgid "Use random port (49152-65535)"
+msgstr "Uporabi naključna vrata (49152-65535)"
+
+msgctxt "#30141"
+msgid "Enable TCP protocol"
+msgstr "Uporabi TCP protokol"
+
+msgctxt "#30142"
+msgid "Enable uTP (uTorrent Transport Protocol)"
+msgstr "Uporabi uTP (uTorrent Transport Protocol)"
+
+msgctxt "#30143"
+msgid "The limit of the total number of connections"
+msgstr "Maksimalno število povezav"
+
+msgctxt "#30144"
+msgid "Reset"
+msgstr "Ponastavitev"
+
+msgctxt "#30145"
+msgid "The number of peers who try to connect after the initial response"
+msgstr "Število vrstnikov ki se poskušajo povezati"
+
+msgctxt "#30146"
+msgid "The total number of connection attempts per second"
+msgstr "Število poskusov povezav na sekundo"
+
+msgctxt "#30147"
+msgid "Number of seconds before the connection attempt failed"
+msgstr "Number of seconds before the connection attempt failed"
+
+msgctxt "#30149"
+msgid "Number of seconds to wait between connection failures"
+msgstr "Čas čakanja med neuspelimi poskusi povezave"
+
+msgctxt "#30150"
+msgid "Number of failure attempts before peer will be discarded"
+msgstr "Number of failure attempts before peer will be discarded"
+
+msgctxt "#30151"
+msgid "Enable DHT (Distributed Hash Table)"
+msgstr "Vključi DHT (Distributed Hash Table)"
+
+msgctxt "#30152"
+msgid "Enable LSD (Local Service Discovery)"
+msgstr "Vključi LSD (Local Service Discovery)"
+
+msgctxt "#30153"
+msgid "Enable NATPMP (NAT Port Mapping Protocol)"
+msgstr "Vključi NATPMP (NAT Port Mapping Protocol)"
+
+msgctxt "#30154"
+msgid "Enable UPnP (Universal Plug and Play)"
+msgstr "Vključi UPnP (Universal Plug and Play)"
+
+msgctxt "#30155"
+msgid "Enable sending scrape request to tracker (Tracker Scrape)"
+msgstr "Vključi pošiljanje "Tracker Scrape" zahtevkov"
+
+msgctxt "#30156"
+msgid "Trackers (comma-separated URLs)"
+msgstr "Cledilniki (URL naslovi ločeni z vejico)"
+
+msgctxt "#30157"
+msgid "DHT routers (comma-separated host:port pairs)"
+msgstr "DHT usmerjevalniki (gostitelj:vrata pari ločeni z vejico)"
+
+msgctxt "#30158"
+msgid "Enable debugging"
+msgstr "Vključi razhroščevanje"
+
+msgctxt "#30159"
+msgid "Network (Torrent)"
+msgstr "Omrežje (Torrent)"
+
+msgctxt "#30160"
+msgid "Search"
+msgstr "Iskanje"
+
+msgctxt "#30162"
+msgid "Movie"
+msgstr "Filmi"
+
+msgctxt "#30163"
+msgid "TV Shows"
+msgstr "TV Serije"
+
+msgctxt "#30164"
+msgid "Prioritize Hearing Impaired Subtitles"
+msgstr "Prednostno podnapisi za slušno prizadete"
+
+msgctxt "#30165"
+msgid "Gather movie information from"
+msgstr "Pridobi informacije za Filme iz:"
+
+msgctxt "#30168"
+msgid "Get subtitles from"
+msgstr "Pridobi podnapise od:"
+
+msgctxt "#30169"
+msgid "Gather TV information from"
+msgstr "Pridobi informacije za TV Serije iz:"
+
+msgctxt "#30170"
+msgid "None"
+msgstr "Brez"
+
+msgctxt "#30171"
+msgid "The Movie Database"
+msgstr "The Movie Database"
+
+msgctxt "#30172"
+msgid "YIFY Subtitles"
+msgstr "YIFY Subtitles"
+
+msgctxt "#30173"
+msgid "Only 480p"
+msgstr "Samo 480p"
+
+msgctxt "#30174"
+msgid "Video"
+msgstr "Video"
+
+msgctxt "#30201"
+msgid "Albanian"
+msgstr "Albanian"
+
+msgctxt "#30202"
+msgid "Arabic"
+msgstr "Arabic"
+
+msgctxt "#30203"
+msgid "Bengali"
+msgstr "Bengali"
+
+msgctxt "#30204"
+msgid "Brazilian Portuguese"
+msgstr "Brazilian Portuguese"
+
+msgctxt "#30205"
+msgid "Bulgarian"
+msgstr "Bulgarian"
+
+msgctxt "#30206"
+msgid "Chinese"
+msgstr "Chinese"
+
+msgctxt "#30207"
+msgid "Croatian"
+msgstr "Croatian"
+
+msgctxt "#30208"
+msgid "Czech"
+msgstr "Czech"
+
+msgctxt "#30209"
+msgid "Danish"
+msgstr "Danish"
+
+msgctxt "#30210"
+msgid "Dutch"
+msgstr "Dutch"
+
+msgctxt "#30211"
+msgid "English"
+msgstr "English"
+
+msgctxt "#30212"
+msgid "Farsi/Persian"
+msgstr "Farsi/Persian"
+
+msgctxt "#30213"
+msgid "Finnish"
+msgstr "Finnish"
+
+msgctxt "#30214"
+msgid "French"
+msgstr "French"
+
+msgctxt "#30215"
+msgid "German"
+msgstr "German"
+
+msgctxt "#30216"
+msgid "Greek"
+msgstr "Greek"
+
+msgctxt "#30217"
+msgid "Hebrew"
+msgstr "Hebrew"
+
+msgctxt "#30218"
+msgid "Hungarian"
+msgstr "Hungarian"
+
+msgctxt "#30219"
+msgid "Indonesian"
+msgstr "Indonesian"
+
+msgctxt "#30220"
+msgid "Italian"
+msgstr "Italian"
+
+msgctxt "#30221"
+msgid "Japanese"
+msgstr "Japanese"
+
+msgctxt "#30222"
+msgid "Korean"
+msgstr "Korean"
+
+msgctxt "#30223"
+msgid "Lithuanian"
+msgstr "Lithuanian"
+
+msgctxt "#30224"
+msgid "Macedonian"
+msgstr "Macedonian"
+
+msgctxt "#30225"
+msgid "Malay"
+msgstr "Malay"
+
+msgctxt "#30226"
+msgid "Norwegian"
+msgstr "Norwegian"
+
+msgctxt "#30227"
+msgid "Polish"
+msgstr "Polish"
+
+msgctxt "#30228"
+msgid "Portuguese"
+msgstr "Portuguese"
+
+msgctxt "#30229"
+msgid "Romanian"
+msgstr "Romanian"
+
+msgctxt "#30230"
+msgid "Russian"
+msgstr "Russian"
+
+msgctxt "#30231"
+msgid "Serbian"
+msgstr "Serbian"
+
+msgctxt "#30232"
+msgid "Slovenian"
+msgstr "Slovenian"
+
+msgctxt "#30233"
+msgid "Spanish"
+msgstr "Spanish"
+
+msgctxt "#30234"
+msgid "Swedish"
+msgstr "Swedish"
+
+msgctxt "#30235"
+msgid "Thai"
+msgstr "Thai"
+
+msgctxt "#30236"
+msgid "Turkish"
+msgstr "Turkish"
+
+msgctxt "#30237"
+msgid "Urdu"
+msgstr "Urdu"
+
+msgctxt "#30238"
+msgid "Vietnamese"
+msgstr "Vietnamese"
+
+msgctxt "#30300"
+msgid "Cannot find port to bind torrent2http"
+msgstr "Ni možno pridobiti vrat za torrent2http"
+
+msgctxt "#30301"
+msgid "Cache cleared"
+msgstr "Predpomnilnik pobrisan"
+
+msgctxt "#30302"
+msgid "Your OS is not supported"
+msgstr "OS ni podprt"
+
+msgctxt "#30304"
+msgid "Did not receive any data"
+msgstr "Ni podatkov"
+
+msgctxt "#30305"
+msgid "Did not receive any movies"
+msgstr "Ni filmov"
+
+msgctxt "#30308"
+msgid "An unknown error has occurred"
+msgstr "Zgodila se je neznana napaka"
+
+msgctxt "#30310"
+msgid "Download path does not exist. Please check your addon settings"
+msgstr "Mapa za prenos ne obstaja. Preveri nastavitve"
+
+msgctxt "#30313"
+msgid "A torrent error has occurred"
+msgstr "Napaka z Torrent-om"
+
+msgctxt "#30314"
+msgid "Torrent settings were reset"
+msgstr "Nastavitve za Torrent so resetirane"
+
+msgctxt "#30315"
+msgid "No movie or tv-show providers were found"
+msgstr "Ne najdem nobenih ponudnikov"
+
+msgctxt "#30316"
+msgid "Torrent file did not contain a movie"
+msgstr "Torrent datoteka ne vsebije videa"
+
+msgctxt "#30317"
+msgid "A connection has not answered before timeout"
+msgstr "Povezava se ne oglasi"
+
+msgctxt "#30318"
+msgid "Playback is terminated due to timeout"
+msgstr "Predvajanje se je prekinilo zaradi preteka časa"
+
+msgctxt "#30319"
+msgid "Downloading to an unmounted network share is not supported. Please check your addon settings"
+msgstr "Prenos na odklopljen mrežni disk ni podprt. Preveri nastavitve"
+
+msgctxt "#30320"
+msgid "Cannot find torrent2http"
+msgstr "Ne najdem torrent2http"
+
+msgctxt "#30321"
+msgid "Cannot make torrent2http executable"
+msgstr "Ni možno zagnati torrent2http"
+
+msgctxt "#30322"
+msgid "Unable to create cache directory"
+msgstr "Ni možno narediti predpomnilnika"
+
+msgctxt "#30323"
+msgid "There is not enough free space to play. Please free up some space or choose a different download location"
+msgstr "Premalo prostora za predvajanje. Potrebno sprostiti nekaj prostora na disku."
+
+msgctxt "#30324"
+msgid "Max Upload Rate must be above 15 Kilobytes per second. Please go to the addon settings and set a minimum speed of 15 kilobytes per second"
+msgstr "Maksimalna hitrost nalaganja mora biti višja od 15 Kb na sekundo. Preveri nastavitve."
+
+msgctxt "#30325"
+msgid "You need more space to play %s and %s qualities or choose a lower quality"
+msgstr "Potrebuješ več prostora za predvajanje v %s in %s kvalitetah, ali izberi nižjo kvaliteto."
+
+msgctxt "#30326"
+msgid "You need more space to play %s quality or choose a lower quality"
+msgstr "Potrebuješ več prostora za predvajanje v %s kvaliteti ali izberi nižjo kvaliteto."
+
+msgctxt "#30327"
+msgid "No results found"
+msgstr "Ni najdenih rezultatov"
+
+msgctxt "#30328"
+msgid "Could not receive a media list as there was no domains that worked"
+msgstr "Ne morem pridobiti informacij ker nobena domena ne deluje."
+
+msgctxt "#30329"
+msgid "There was an error with the response from the provider"
+msgstr "Prišlo je do napake pri odgovoru s strani ponudnika."
+
+msgctxt "#30350"
+msgid "Movies"
+msgstr "Filmi"
+
+msgctxt "#30351"
+msgid "TV-Shows"
+msgstr "TV Serije"
+
+msgctxt "#30352"
+msgid "Anime"
+msgstr "Anime"
+
+msgctxt "#30353"
+msgid "30350,30351,30352"
+msgstr "30350,30351,30352"
+
+msgctxt "#30400"
+msgid "Action"
+msgstr "Akcija"
+
+msgctxt "#30401"
+msgid "Adventure"
+msgstr "Avantura"
+
+msgctxt "#30402"
+msgid "Animation"
+msgstr "Animacija"
+
+msgctxt "#30403"
+msgid "Comedy"
+msgstr "Komedija"
+
+msgctxt "#30404"
+msgid "Crime"
+msgstr "Kriminalka"
+
+msgctxt "#30405"
+msgid "Disaster"
+msgstr "Katastrofa"
+
+msgctxt "#30406"
+msgid "Documentary"
+msgstr "Dokumentarec"
+
+msgctxt "#30407"
+msgid "Drama"
+msgstr "Drama"
+
+msgctxt "#30408"
+msgid "Eastern"
+msgstr "Vzhodni"
+
+msgctxt "#30409"
+msgid "Family"
+msgstr "Družinski"
+
+msgctxt "#30410"
+msgid "Fan-Film"
+msgstr "Ljubiteljski-Film"
+
+msgctxt "#30411"
+msgid "Fantasy"
+msgstr "Domišljijski"
+
+msgctxt "#30412"
+msgid "Film-Noir"
+msgstr "Črno-Beli Film"
+
+msgctxt "#30413"
+msgid "History"
+msgstr "Zgodovinski"
+
+msgctxt "#30414"
+msgid "Horror"
+msgstr "Grozljivka"
+
+msgctxt "#30415"
+msgid "Indie"
+msgstr "Indie"
+
+msgctxt "#30416"
+msgid "Music"
+msgstr "Glasbeni"
+
+msgctxt "#30417"
+msgid "Mystery"
+msgstr "Misterij"
+
+msgctxt "#30418"
+msgid "Road"
+msgstr "Popotovaje"
+
+msgctxt "#30419"
+msgid "Romance"
+msgstr "Ljubezenski"
+
+msgctxt "#30420"
+msgid "Sci-Fi"
+msgstr "Znanstvena Fantastika"
+
+msgctxt "#30421"
+msgid "Short"
+msgstr "Kratki"
+
+msgctxt "#30422"
+msgid "Sport"
+msgstr "Športni"
+
+msgctxt "#30423"
+msgid "Sporting-event"
+msgstr "Športni dogodek"
+
+msgctxt "#30424"
+msgid "Suspence"
+msgstr "Suspence"
+
+msgctxt "#30425"
+msgid "Thriller"
+msgstr "Triler"
+
+msgctxt "#30426"
+msgid "TV-Movie"
+msgstr "TV-Film"
+
+msgctxt "#30427"
+msgid "War"
+msgstr "Vojaški"
+
+msgctxt "#30428"
+msgid "Western"
+msgstr "Western"
+
+msgctxt "#30450"
+msgid "Action"
+msgstr "Action"
+
+msgctxt "#30451"
+msgid "Ecchi"
+msgstr "Ecchi"
+
+msgctxt "#30452"
+msgid "Harem"
+msgstr "Harem"
+
+msgctxt "#30453"
+msgid "Romance"
+msgstr "Romance"
+
+msgctxt "#30454"
+msgid "School"
+msgstr "School"
+
+msgctxt "#30455"
+msgid "Supernatural"
+msgstr "Supernatural"
+
+msgctxt "#30456"
+msgid "Drama"
+msgstr "Drama"
+
+msgctxt "#30457"
+msgid "Comedy"
+msgstr "Comedy"
+
+msgctxt "#30458"
+msgid "Mystery"
+msgstr "Mystery"
+
+msgctxt "#30459"
+msgid "Police"
+msgstr "Police"
+
+msgctxt "#30461"
+msgid "Sports"
+msgstr "Sports"
+
+msgctxt "#30462"
+msgid "Mecha"
+msgstr "Mecha"
+
+msgctxt "#30463"
+msgid "Sci-Fi"
+msgstr "Sci-Fi"
+
+msgctxt "#30464"
+msgid "Slice of Life"
+msgstr "Slice of Life"
+
+msgctxt "#30465"
+msgid "Fantasy"
+msgstr "Fantasy"
+
+msgctxt "#30466"
+msgid "Adventure"
+msgstr "Adventure"
+
+msgctxt "#30467"
+msgid "Gore"
+msgstr "Gore"
+
+msgctxt "#30468"
+msgid "Music"
+msgstr "Music"
+
+msgctxt "#30469"
+msgid "Psychological"
+msgstr "Psychological"
+
+msgctxt "#30470"
+msgid "Shoujo Ai"
+msgstr "Shoujo Ai"
+
+msgctxt "#30471"
+msgid "Yuri"
+msgstr "Yuri"
+
+msgctxt "#30472"
+msgid "Magic"
+msgstr "Magic"
+
+msgctxt "#30473"
+msgid "Horror"
+msgstr "Horror"
+
+msgctxt "#30474"
+msgid "Thriller"
+msgstr "Thriller"
+
+msgctxt "#30475"
+msgid "Gender Bender"
+msgstr "Gender Bender"
+
+msgctxt "#30476"
+msgid "Parody"
+msgstr "Parody"
+
+msgctxt "#30477"
+msgid "Historical"
+msgstr "Historical"
+
+msgctxt "#30478"
+msgid "Racing"
+msgstr "Racing"
+
+msgctxt "#30479"
+msgid "Samurai"
+msgstr "Samurai"
+
+msgctxt "#30480"
+msgid "Super Power"
+msgstr "Super Power"
+
+msgctxt "#30481"
+msgid "Military"
+msgstr "Military"
+
+msgctxt "#30482"
+msgid "Dementia"
+msgstr "Dementia"
+
+msgctxt "#30483"
+msgid "Mahou Shounen"
+msgstr "Mahou Shounen"
+
+msgctxt "#30484"
+msgid "Game"
+msgstr "Game"
+
+msgctxt "#30485"
+msgid "Martial Arts"
+msgstr "Martial Arts"
+
+msgctxt "#30486"
+msgid "Vampire"
+msgstr "Vampire"
+
+msgctxt "#30487"
+msgid "Kids"
+msgstr "Kids"
+
+msgctxt "#30488"
+msgid "Mahou Shoujo"
+msgstr "Mahou Shoujo"
+
+msgctxt "#30489"
+msgid "Space"
+msgstr "Space"
+
+msgctxt "#30490"
+msgid "Shounen Ai"
+msgstr "Shounen Ai"
+
+msgctxt "#30498"
+msgid "30450,30451,30452,30453,30454,30455,30456,30457,30458,30459,30461,30462,30463,30464,30465,30466,30467,30468,30469,30470,30471,30472,30473,30474,30475,30476,30477,30478,30479,30480,30481,30482,30483,30484,30485,30486,30487,30488,30489,30490"
+msgstr "30450,30451,30452,30453,30454,30455,30456,30457,30458,30459,30461,30462,30463,30464,30465,30466,30467,30468,30469,30470,30471,30472,30473,30474,30475,30476,30477,30478,30479,30480,30481,30482,30483,30484,30485,30486,30487,30488,30489,30490"
+
+msgctxt "#30499"
+msgid "30400,30401,30402,30403,30404,30405,30406,30407,30408,30409,30410,30411,30412,30413,30414,30415,30416,30417,30418,30419,30420,30421,30422,30423,30424,30425,30426,30427,30428"
+msgstr "30400,30401,30402,30403,30404,30405,30406,30407,30408,30409,30410,30411,30412,30413,30414,30415,30416,30417,30418,30419,30420,30421,30422,30423,30424,30425,30426,30427,30428"

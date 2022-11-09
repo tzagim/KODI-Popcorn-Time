@@ -33,8 +33,9 @@ class List(_Base):
         self._provider_fn       = getattr(mediaSettings.provider, call)
         self._provider_build_fn = getattr(mediaSettings.provider, "%s_build" %call)
         self._call              = call
-        self._args              = args
-        self._kwargs            = kwargs
+        # _args and _kwargs are set by Thread()
+        self.__args             = args
+        self.__kwargs           = kwargs
         self._data              = {}
         self._proxy_attempt     = 0
         self._domaine           = None
@@ -54,9 +55,9 @@ class List(_Base):
 
     def _run(self):
         log("(Media) Getting list", LOGLEVEL.INFO)
-        _res = self._handle_param(**self._provider_fn(*self._args, **self._kwargs))
+        _res = self._handle_param(**self._provider_fn(*self.__args, **self.__kwargs))
         if not self.stop.is_set():
-            self._data = self._provider_build_fn(_res, *self._args, **self._kwargs) # 1. Get request parameter. 2. Perform request. 3. Build item.
+            self._data = self._provider_build_fn(_res, *self.__args, **self.__kwargs) # 1. Get request parameter. 2. Perform request. 3. Build item.
             self.close()
 
 class MediaCache:
@@ -173,7 +174,7 @@ class _Dispenser(_Base):
                 jobId, item = self._queue.pop(0)
 
                 if self._preloader: # No peloader is the same as no provider
-                    id = hashlib.md5(str(item)).hexdigest()
+                    id = hashlib.md5(str(item).encode()).hexdigest()
                     args = [item.get("info", {}).get("code"), item["label"], item.get("info", {}).get("year")]
                     if self._mediaSettings.metadata_provider:
                         self._getMeta(item, args, id)
@@ -186,7 +187,6 @@ class _Dispenser(_Base):
                 self._data.insert(jobId, item)
 
             except IndexError:
-                sys.exc_clear()
                 self.close()
 
     def _getMeta(self, item, args, id):
@@ -199,7 +199,6 @@ class _Dispenser(_Base):
                         metadata = cleanDictList(self._mediaSettings.metadata_provider.build_item(_res, *args+[_settings.language])) # 1. Get request parameter. 2. Perform request(s). 3. Build info.
                 except:
                     log_error()
-                    sys.exc_clear()
                 finally:
                     if self._callbackfn:
                         log("(Media) Callback with '%s'" %item['label'])
@@ -214,7 +213,6 @@ class _Dispenser(_Base):
                             fallbackMeta = self._mediaSettings.metadata_provider.build_item(_res, *args+[_settings.language]) # 1. Get request parameter. 2. Perform request(s). 3. Build info.
                     except:
                         log_error()
-                        sys.exc_clear()
                     else:
                         if metadata and fallbackMeta:
                             fallbackMeta.update(metadata)
@@ -249,7 +247,6 @@ class _Dispenser(_Base):
                     subtitle = cleanDictList(self._mediaSettings.subtitles_provider.build_item(_res, *args)) # 1. Get request parameter. 2. Perform request(s). 3. Build info.
             except:
                 log_error()
-                sys.exc_clear()
             else:
                 if subtitle:
                     Cache("%s.mediainfo.subtitles" %self._mediaSettings.mediaType, ttl=_ttl, last_changed=self._mediaSettings.subtitle_lastchanged)[id] = subtitle

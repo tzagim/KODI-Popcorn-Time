@@ -93,7 +93,7 @@ class Player(_Base):
             waring = []
             for _q in self.mediaSettings.qualities:
                 if params.get(_q):
-                    if params['%ssize' %_q] > free_space:
+                    if int(params['%ssize' % _q]) < free_space:
                         if _q == '3D' and self.mediaSettings.play3d == 1 and not Dialog().yesno(line2=30011, lineStr1=' ', headingStr=item['info']['title']):
                             continue
                         quality = _q
@@ -108,11 +108,11 @@ class Player(_Base):
                     notify(message=__addon__.getLocalizedString(30325) %(", ".join(waring), waring.pop()), level=NOTIFYLEVEL.WARNING)
                 else:
                     notify(message=__addon__.getLocalizedString(30326) %waring[0], level=NOTIFYLEVEL.WARNING)
-                log('(Player) There must be a minimum of %s to play. %s available in %s' %(shortenBytes(params['%ssize' %quality]), shortenBytes(free_space), self.mediaSettings.download_path), LOGLEVEL.NOTICE)
+                log('(Player) There must be a minimum of %s to play. %s available in %s' %(shortenBytes(int(params['%ssize' % quality])), shortenBytes(free_space), self.mediaSettings.download_path), LOGLEVEL.INFO)
 
         elif not params.get(quality):
                 raise Error('%s quality was not found' %quality, 30023)
-        elif params['%ssize' %quality] < free_space:
+        elif int(params['%ssize' % quality]) > free_space:
                 raise Notify('There is not enough free space in %s' %self.mediaSettings.download_path, 30323, level=NOTIFYLEVEL.ERROR)
 
         TorrentPlayer().playTorrentFile(self.mediaSettings, build_magnetFromMeta(params[quality], "quality %s" %quality), item, subtitle)

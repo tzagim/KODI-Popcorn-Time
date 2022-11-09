@@ -1,5 +1,6 @@
 ﻿#!/usr/bin/python
-import sys, os, xbmcaddon, urlparse, urllib
+import sys, os, xbmcaddon
+from urllib.parse import parse_qsl, urlencode
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'resources', 'lib'))
 __addon__ = xbmcaddon.Addon()
 from kodipopcorntime.platform import Platform
@@ -14,14 +15,11 @@ def _fix(params):
     if not params.get('endpoint'):
         params = settings.movies.provider.folders(None)[0]["params"]
         params['mediaType'] = 'movies'
-        settings.addon.cur_uri = "%s?%s" %(settings.addon.base_url, urllib.urlencode(params))
+        settings.addon.cur_uri = "%s?%s" %(settings.addon.base_url, urlencode(params))
     return params
 
 if __name__ == '__main__':
     try:
-        reload(sys)
-        sys.setdefaultencoding("utf-8")
-
         log("(Main) Starting %s version %s build %s - Platform: %s %s" %(settings.addon.name, settings.addon.version, settings.BUILD, Platform.system, Platform.arch), LOGLEVEL.INFO)
 
         log("(Main) Platform: %s" %sys.platform)
@@ -32,7 +30,7 @@ if __name__ == '__main__':
         if not Platform.system:
             raise Error("Unsupported OS", 30302)
 
-        params = dict(urlparse.parse_qsl(settings.addon.cur_uri))
+        params = dict(parse_qsl(settings.addon.cur_uri))
         cmd = params.get('cmd')
 
         if not cmd:
@@ -48,11 +46,9 @@ if __name__ == '__main__':
         log_error()
     except Notify as e:
         notify(e.messageID, e.message, level=e.level)
-        log("(Main) Notify: %s" %str(e), LOGLEVEL.NOTICE)
-        sys.exc_clear()
+        log("(Main) Notify: %s" %str(e), LOGLEVEL.INFO)
     except Abort:
         log("(Main) Abort", LOGLEVEL.INFO)
-        sys.exc_clear()
     except:
         notify(30308, level=NOTIFYLEVEL.ERROR)
         log_error()

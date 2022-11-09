@@ -5,7 +5,8 @@ class Thread(threading.Thread):
     LOCAL = threading.local()
 
     def __init__(self, target=None):
-        self._target   = target or self.run
+        # _target is set by Thread()
+        self.__target = target or self.run
         self._exc_info = []
 
         super(Thread, self).__init__(target=self.___run)
@@ -19,18 +20,17 @@ class Thread(threading.Thread):
     def ___run(self):
         try:
             Thread.LOCAL.tName = self.getName()
-            self._target()
+            self.__target()
         except:
             self._exc_info = sys.exc_info()
-            sys.exc_clear()
             self.stop.set()
 
     def checkError(self):
         return len(self._exc_info) > 0
 
     def raiseAnyError(self):
-        if self._exc_info: 
-            raise self._exc_info[0], self._exc_info[1], self._exc_info[2]
+        if self._exc_info:
+            raise self._exc_info[1].with_traceback(self._exc_info[2])
 
     def cleanError(self):
         self._exc_info = []
