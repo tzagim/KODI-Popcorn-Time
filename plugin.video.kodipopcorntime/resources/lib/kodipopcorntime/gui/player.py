@@ -31,8 +31,10 @@ class Player(_Base):
         
         if xbmc.getInfoLabel('ListItem.VideoResolution') == '4K':
             _width = 3840
+        elif xbmc.getInfoLabel('ListItem.VideoResolution') == '1920' or xbmc.getInfoLabel('ListItem.VideoResolution') == '1080':
+            _width = 1920
         else:
-            _width = int(xbmc.getInfoLabel('ListItem.VideoResolution'))
+            _width = int(xbmc.getInfoLabel('ListItem.VideoResolution')) or 1920
         if xbmc.getInfoLabel('ListItem.VideoResolution') == '4K' or xbmc.getInfoLabel('ListItem.VideoResolution') == '2160':
             _height = 2160 
         elif xbmc.getInfoLabel('ListItem.VideoResolution') == '1920' or xbmc.getInfoLabel('ListItem.VideoResolution') == '1080':
