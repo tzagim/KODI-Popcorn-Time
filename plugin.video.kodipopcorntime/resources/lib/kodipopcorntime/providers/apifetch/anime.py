@@ -66,24 +66,31 @@ class Anime(BaseContentWithSeasons):
     id_field = '_id'
     request_path = 'anime'
     search_path = 'animes'
+    dom_use = 'key_dom'
 
     @classmethod
     def _get_item_info(cls, data):
         tagline = ''
         try:
-            tagline_temp = ('1080p: %s seeds; ' %data[0].get('torrents').get('1080p').get('seeds'))
+            tagline_temp = ('2160p: %s seeds; ' % data.get('torrents').get('en').get('2160p').get('seed'))
         except:
             pass
         else:
             tagline += tagline_temp
         try:
-            tagline_temp = ('720p: %s seeds; ' %data[0].get('torrents').get('720p').get('seeds'))
+            tagline_temp = ('1080p: %s seeds; ' % data.get('torrents').get('en').get('1080p').get('seed'))
         except:
             pass
         else:
             tagline += tagline_temp
         try:
-            tagline_temp = ('480p: %s seeds; ' %data[0].get('torrents').get('480p').get('seeds'))
+            tagline_temp = ('720p: %s seeds; ' % data.get('torrents').get('en').get('720p').get('seed'))
+        except:
+            pass
+        else:
+            tagline += tagline_temp
+        try:
+            tagline_temp = ('480p: %s seeds; ' % data.get('torrents').get('en').get('480p').get('seed'))
         except:
             pass
         else:
@@ -258,7 +265,12 @@ def _favourites(dom, **kwargs):
 
 
 def _shows(dom, **kwargs):
-    return Anime.get_shows(dom, **kwargs)
+    for d in dom:
+        try:
+            return Anime.get_shows(d, **kwargs)
+        except:
+            continue
+    return []
 
 
 def _seasons(dom, **kwargs):

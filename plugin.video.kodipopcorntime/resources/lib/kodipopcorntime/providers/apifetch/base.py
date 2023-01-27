@@ -157,13 +157,13 @@ class BaseContentWithSeasons(BaseContent):
                 search_string = keyboard.getText()
                 search_string = search_string.replace(' ', '+')
             search = '{domain}/{search_path}/1?keywords={keywords}'.format(
-                domain=dom[0],
+                domain=dom,
                 search_path=cls.search_path,
                 keywords=search_string,
             )
         else:
             search = '{domain}/{search_path}/{page}?genre={genre}&sort={sort}'.format(
-                domain=dom[0],
+                domain=dom,
                 search_path=cls.search_path,
                 page=kwargs['page'],
                 genre=kwargs['genre'],
@@ -193,6 +193,7 @@ class BaseContentWithSeasons(BaseContent):
                     "endpoint": "folders",  # "endpoint" is required
                     'action': "{category}-seasons".format(category=cls.category),  # Required when calling browse or folders (Action is used to separate the content)
                     cls.id_field: result[cls.id_field],
+                    cls.dom_use: dom,
                     'poster': result.get('images').get('poster'),
                     'fanart': result.get('images').get('fanart'),
                     'tvshow': result['title']
@@ -232,7 +233,7 @@ class BaseContentWithSeasons(BaseContent):
     def get_seasons(cls, dom, **kwargs):
         req = Request(
             '{domain}/{request_path}/{content_id}'.format(
-                domain=dom[0],
+                domain=kwargs[cls.dom_use],
                 request_path=cls.request_path,
                 content_id=kwargs[cls.id_field]
             ),

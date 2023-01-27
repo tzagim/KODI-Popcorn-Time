@@ -52,24 +52,31 @@ class TvShow(BaseContentWithSeasons):
     id_field = 'imdb_id'
     request_path = 'show'
     search_path = 'shows'
+    dom_use = 'key_dom'
 
     @classmethod
     def _get_item_info(cls, data):
         tagline = ''
         try:
-            tagline_temp = ('1080p: %s seeds; ' %data[0].get('torrents').get('1080p').get('seeds'))
+            tagline_temp = ('2160p: %s seeds; ' % data.get('torrents').get('en').get('2160p').get('seed'))
         except:
             pass
         else:
             tagline += tagline_temp
         try:
-            tagline_temp = ('720p: %s seeds; ' %data[0].get('torrents').get('720p').get('seeds'))
+            tagline_temp = ('1080p: %s seeds; ' % data.get('torrents').get('en').get('1080p').get('seed'))
         except:
             pass
         else:
             tagline += tagline_temp
         try:
-            tagline_temp = ('480p: %s seeds; ' %data[0].get('torrents').get('480p').get('seeds'))
+            tagline_temp = ('720p: %s seeds; ' % data.get('torrents').get('en').get('720p').get('seed'))
+        except:
+            pass
+        else:
+            tagline += tagline_temp
+        try:
+            tagline_temp = ('480p: %s seeds; ' % data.get('torrents').get('en').get('480p').get('seed'))
         except:
             pass
         else:
@@ -83,7 +90,7 @@ class TvShow(BaseContentWithSeasons):
             "season": int(data[0].get('season') or 0),
             "episode": int(data[0].get('episode') or 0),
             "tvshowtitle": data[-1]['tvshow'],
-            "duration": int(data[-1]['runtime'])*60,
+            "duration": 0,
             "status": data[-1]['status'],
             "country": data[-1]['country'],
             "code": data[0].get("tvdb_id"),
@@ -277,7 +284,12 @@ def _favourites(dom, **kwargs):
 
 
 def _shows(dom, **kwargs):
-    return TvShow.get_shows(dom, **kwargs)
+    for d in dom:
+        try:
+            return TvShow.get_shows(d, **kwargs)
+        except:
+            continue
+    return []
 
 
 def _seasons(dom, **kwargs):
