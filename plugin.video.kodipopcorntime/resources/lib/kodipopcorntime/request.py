@@ -8,10 +8,11 @@ from kodipopcorntime.exceptions import HTTPError, ProxyError
 from kodipopcorntime.logging import log, LOGLEVEL
 from kodipopcorntime.settings import addon as _settings
 from kodipopcorntime import favourites as _favs
+import xbmcvfs
 
 __addon__ = xbmcaddon.Addon()
 __addonname__ = __addon__.getAddonInfo('name')
-__addondir__ = xbmc.translatePath(__addon__.getAddonInfo('profile'))
+__addondir__ = xbmcvfs.translatePath(__addon__.getAddonInfo('profile'))
 
 _json_file = os.path.join(__addondir__, 'test.json')
 

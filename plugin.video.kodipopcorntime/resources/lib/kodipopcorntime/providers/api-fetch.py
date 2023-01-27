@@ -1,6 +1,7 @@
 import os
 import sys
 import xbmc
+import xbmcvfs
 import xbmcaddon
 from kodipopcorntime import settings
 from .apifetch import movies as api_movies
@@ -18,7 +19,7 @@ _categories = {
 
 __addon__ = xbmcaddon.Addon()
 __addonname__ = __addon__.getAddonInfo('name')
-__addondir__ = xbmc.translatePath(__addon__.getAddonInfo('profile'))
+__addondir__ = xbmcvfs.translatePath(__addon__.getAddonInfo('profile'))
 
 _json_file = os.path.join(__addondir__, 'test.json')
 
