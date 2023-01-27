@@ -1,7 +1,7 @@
 import json
 import os
 import sys
-import urllib2
+from urllib.request import Request, urlopen
 
 import xbmc
 
@@ -52,14 +52,14 @@ class BaseContent(object):
 
         return {
             'video': {
-                'codec': u'h264',
+                'codec': 'h264',
                 'duration': int(0),
                 'width': width,
                 'height': height,
             },
             'audio': {
-                'codec': u'aac',
-                'language': u'en',
+                'codec': 'aac',
+                'language': 'en',
                 'channels': 2,
             },
         }
@@ -157,27 +157,27 @@ class BaseContentWithSeasons(BaseContent):
                 search_string = keyboard.getText()
                 search_string = search_string.replace(' ', '+')
             search = '{domain}/{search_path}/1?keywords={keywords}'.format(
-                domain=dom[0],
+                domain=dom,
                 search_path=cls.search_path,
                 keywords=search_string,
             )
         else:
             search = '{domain}/{search_path}/{page}?genre={genre}&sort={sort}'.format(
-                domain=dom[0],
+                domain=dom,
                 search_path=cls.search_path,
                 page=kwargs['page'],
                 genre=kwargs['genre'],
                 sort=kwargs['act'],
             )
 
-        req = urllib2.Request(
+        req = Request(
             search,
             headers={
                 "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.66 Safari/537.36",
                 "Accept-Encoding": "none",
             },
         )
-        response = urllib2.urlopen(req)
+        response = urlopen(req)
         results = json.loads(response.read())
 
         items = [
@@ -193,6 +193,7 @@ class BaseContentWithSeasons(BaseContent):
                     "endpoint": "folders",  # "endpoint" is required
                     'action': "{category}-seasons".format(category=cls.category),  # Required when calling browse or folders (Action is used to separate the content)
                     cls.id_field: result[cls.id_field],
+                    cls.dom_use: dom,
                     'poster': result.get('images').get('poster'),
                     'fanart': result.get('images').get('fanart'),
                     'tvshow': result['title']
@@ -230,9 +231,9 @@ class BaseContentWithSeasons(BaseContent):
 
     @classmethod
     def get_seasons(cls, dom, **kwargs):
-        req = urllib2.Request(
+        req = Request(
             '{domain}/{request_path}/{content_id}'.format(
-                domain=dom[0],
+                domain=kwargs[cls.dom_use],
                 request_path=cls.request_path,
                 content_id=kwargs[cls.id_field]
             ),
@@ -242,7 +243,7 @@ class BaseContentWithSeasons(BaseContent):
             },
         )
 
-        response = urllib2.urlopen(req)
+        response = urlopen(req)
         result = json.loads(response.read())
         seasons = result['episodes']
 
@@ -314,11 +315,10 @@ class BaseContentWithSeasons(BaseContent):
     def _get_torrents_information(data):
         torrents = {}
         for quality, torrent_info in data[0].get('torrents', {}).items():
-            if torrent_info is not None:
-                torrent_url = torrent_info.get('url')
-                if quality in settings.QUALITIES and torrent_url is not None:
-                    torrents.update({
-                        quality: torrent_url,
-                        '{0}size'.format(quality): 1000000000*60,
-                    })
+            torrent_url = torrent_info.get('url')
+            if quality in settings.QUALITIES and torrent_url is not None:
+                torrents.update({
+                    quality: torrent_url,
+                    '{0}size'.format(quality): 0,
+                })
         return torrents

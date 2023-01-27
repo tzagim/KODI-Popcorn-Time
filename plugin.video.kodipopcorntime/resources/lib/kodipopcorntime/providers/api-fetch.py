@@ -1,6 +1,7 @@
 import os
 import sys
 import xbmc
+import xbmcvfs
 import xbmcaddon
 from kodipopcorntime import settings
 from .apifetch import movies as api_movies
@@ -18,7 +19,7 @@ _categories = {
 
 __addon__ = xbmcaddon.Addon()
 __addonname__ = __addon__.getAddonInfo('name')
-__addondir__ = xbmc.translatePath(__addon__.getAddonInfo('profile'))
+__addondir__ = xbmcvfs.translatePath(__addon__.getAddonInfo('profile'))
 
 _json_file = os.path.join(__addondir__, 'test.json')
 
@@ -26,8 +27,11 @@ _proxy_identifier = 'api-fetch.proxies'
 
 def _getDomains():
     domains = [
-        # Currently working and has all 3 categories
-        "https://tv-v2.api-fetch.sh"
+        # Currently working, doesn't support anime yet
+        "https://shows.cf/",
+        "https://movies-api.ga/",
+        "https://movies-api.tk/",
+        "https://popcorn-time.ga"
     ]
 
     # User domains have highest priority
@@ -67,9 +71,9 @@ def folders(action, **kwargs):
         '''Action genres_movies creates a list of genres'''
         return api_movies._folders(action)
 
-	if action == 'favourites_movies':
-		'''Action favorites_TV-Shows gets saved favourites for TV Shows'''
-		return api_movies._favourites(_dom, **kwargs)
+    if action == 'favourites_movies':
+        '''Action favorites_TV-Shows gets saved favourites for TV Shows'''
+        return api_movies._favourites(_dom, **kwargs)
 
     if action == 'cat_TVShows':
         '''Action cat_TVShows creates a list of options for TV Shows '''
@@ -140,25 +144,25 @@ def browse(action, page, **kwargs):
                 'order': kwargs['order']
             },
             'proxyid': _proxy_identifier
-		}
+        }
     else:
         if kwargs['categ'] == 'movie_test':
             return {
-				'proxies': '',
-				'path': 'movie_favs',
-				'params': {
+                'proxies': '',
+                'path': 'movie_favs',
+                'params': {
 
-				},
-				'proxyid': _proxy_identifier
-			}
+                },
+                'proxyid': _proxy_identifier
+            }
         else:
-			return {
-				'proxies': _getDomains(),
-				'path': "/%s/%s" % (kwargs['categ'], action),
-				'params': {
-				},
-				'proxyid': _proxy_identifier
-			}
+            return {
+                'proxies': _getDomains(),
+                'path': "/%s/%s" % (kwargs['categ'], action),
+                'params': {
+                },
+                'proxyid': _proxy_identifier
+            }
 
 def browse_build(data, action, page, **kwargs):
     '''browse_build are used to create a dict with the items when a movie or episode list is displayed.
@@ -179,28 +183,28 @@ def browse_build(data, action, page, **kwargs):
         if not items:
             return {}
     else:
-		if kwargs['categ'] == 'movie_test':
-			for movie in data:
-				item = api_movies._create_item(movie)
-				if item:
-					items.append(item)
-			if not items:
-				return {}
-		else:
-			episodes = data['episodes']
-			for episode in episodes:
-				episode2 = []
-				episode2.append(episode)
-				episode2.append(kwargs)
-				if kwargs['categ'] == 'show':
-					item = api_tvShows._create_item(episode2)
-				else:
-					item = api_anime._create_item(episode2)
-				if item:
-					items.append(item)
-			if not items:
-				return {}
-			items = sorted(items, key=lambda k: k['info']['episode'])
+        if kwargs['categ'] == 'movie_test':
+            for movie in data:
+                item = api_movies._create_item(movie)
+                if item:
+                    items.append(item)
+            if not items:
+                return {}
+        else:
+            episodes = data['episodes']
+            for episode in episodes:
+                episode2 = []
+                episode2.append(episode)
+                episode2.append(kwargs)
+                if kwargs['categ'] == 'show':
+                    item = api_tvShows._create_item(episode2)
+                else:
+                    item = api_anime._create_item(episode2)
+                if item:
+                    items.append(item)
+            if not items:
+                return {}
+            items = sorted(items, key=lambda k: k['info']['episode'])
     return {
         'pages': 50, #int(movie_count/settings.addon.limit) + (movie_count%settings.addon.limit > 0), # Specify the total number of pages (require)
         'items': items

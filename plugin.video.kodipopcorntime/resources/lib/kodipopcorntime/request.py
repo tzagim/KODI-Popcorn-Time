@@ -1,16 +1,18 @@
 ﻿#!/usr/bin/python
-import zlib, simplejson, sys, socket, httplib, errno, xbmcaddon, xbmc, os, json
-from urlparse import urlparse
-from urllib import urlencode
+from http import HTTPStatus
+from http.client import HTTPConnection, HTTPSConnection, responses
+import zlib, simplejson, sys, socket, http, errno, xbmcaddon, xbmc, os, json
+from urllib.parse import urlencode, urlparse
 from kodipopcorntime.utils import Cache
 from kodipopcorntime.exceptions import HTTPError, ProxyError
 from kodipopcorntime.logging import log, LOGLEVEL
 from kodipopcorntime.settings import addon as _settings
 from kodipopcorntime import favourites as _favs
+import xbmcvfs
 
 __addon__ = xbmcaddon.Addon()
 __addonname__ = __addon__.getAddonInfo('name')
-__addondir__ = xbmc.translatePath(__addon__.getAddonInfo('profile'))
+__addondir__ = xbmcvfs.translatePath(__addon__.getAddonInfo('profile'))
 
 _json_file = os.path.join(__addondir__, 'test.json')
 
@@ -31,21 +33,20 @@ class URL(object):
 
             for proxy in proxies_cache['proxies'][:]:
                 try:
-					if path == 'movie_favs':
-						_favs._create_movie_favs()
-						with open(_json_file) as json_read:
-							_data = json.load(json_read)
-					else:
-						_data = self.request(proxy, path, params, headers, timeout)
-					if _data or _data is None:
-						return _data
+                    if path == 'movie_favs':
+                        _favs._create_movie_favs()
+                        with open(_json_file) as json_read:
+                            _data = json.load(json_read)
+                    else:
+                        _data = self.request(proxy, path, params, headers, timeout)
+                    if _data or _data is None:
+                        return _data
                 except (HTTPError, socket.timeout, socket.gaierror, socket.herror, socket.error) as e:
                     if e.__class__.__name__ == 'error':
                         if not e.errno in [errno.EUSERS, errno.ECONNRESET, errno.ETIMEDOUT, errno.ECONNREFUSED, errno.EHOSTDOWN]:
                             raise
                     log("(URL) %s: %s - %s" %(e.__class__.__name__, str(e), self.url), LOGLEVEL.ERROR)
-                    sys.exc_clear()
-                log("(URL) Proxy domain '%s' is not working and will therefore have low priority in the future" %proxy, LOGLEVEL.NOTICE)
+                log("(URL) Proxy domain '%s' is not working and will therefore have low priority in the future" %proxy, LOGLEVEL.INFO)
                 proxies_cache.extendKey('proxies', [proxies_cache['proxies'].pop(0)])
             raise ProxyError("There was not any domains that worked", 30328)
 
@@ -57,20 +58,19 @@ class URL(object):
         log("(URL) Trying to obtaining data from %s" %self.url, LOGLEVEL.NONE)
         try:
             if self.scheme == 'https':
-                self.conn = httplib.HTTPSConnection(self.netloc, timeout=timeout)
+                self.conn = HTTPSConnection(self.netloc, timeout=timeout)
             else:
-                self.conn = httplib.HTTPConnection(self.netloc, timeout=timeout)
+                self.conn = HTTPConnection(self.netloc, timeout=timeout)
             if _settings.debug:
                 self.conn.set_debuglevel(1)
             self.conn.request("GET", self.uri, headers=headers)
             response = self.conn.getresponse()
-            if response.status == httplib.OK:
+            if response.status == HTTPStatus.OK:
                 return self._read(response)
-            raise HTTPError("Received wrong status code (%s %s) from %s" %(response.status, httplib.responses.get(response.status, ''), self.url), 30329)
+            raise HTTPError("Received wrong status code (%s %s) from %s" %(response.status, responses.get(response.status, ''), self.url), 30329)
         except socket.error as e:
             if e.errno in [errno.ESHUTDOWN, errno.ECONNABORTED]:
-                log("(URL) socket.error: %s. (Connection has most likely been canceled by user choices)" %str(e), LOGLEVEL.NOTICE)
-                sys.exc_clear()
+                log("(URL) socket.error: %s. (Connection has most likely been canceled by user choices)" %str(e), LOGLEVEL.INFO)
                 return None
             raise
 
@@ -96,7 +96,7 @@ class URL(object):
         if data and response.getheader("Content-Encoding", "") == "gzip":
             data = self.decompress(data)
         if not data:
-            log("(URL) Did not receive any data %s" %self.url, LOGLEVEL.NOTICE)
+            log("(URL) Did not receive any data %s" %self.url, LOGLEVEL.INFO)
         else:
             log("(URL) Successful receive data from %s" %self.url, LOGLEVEL.NONE)
         return data
@@ -134,7 +134,7 @@ class Json(URL):
         if data and response.getheader("Content-Encoding", "") == "gzip":
             data = self.decompress(data)
         if not data:
-            log("(URL) Did not receive any data %s" %self.url, LOGLEVEL.NOTICE)
+            log("(URL) Did not receive any data %s" %self.url, LOGLEVEL.INFO)
         else:
             log("(Json) Reading JSON data", LOGLEVEL.NONE)
             data = simplejson.loads(data, 'UTF-8')

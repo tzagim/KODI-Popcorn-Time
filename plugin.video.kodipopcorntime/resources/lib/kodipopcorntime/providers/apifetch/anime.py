@@ -1,7 +1,7 @@
 import json
 import os
 import sys
-import urllib2
+from urllib.request import Request, urlopen
 import xbmc
 import re
 
@@ -66,24 +66,31 @@ class Anime(BaseContentWithSeasons):
     id_field = '_id'
     request_path = 'anime'
     search_path = 'animes'
+    dom_use = 'key_dom'
 
     @classmethod
     def _get_item_info(cls, data):
         tagline = ''
         try:
-            tagline_temp = ('1080p: %s seeds; ' %data[0].get('torrents').get('1080p').get('seeds'))
+            tagline_temp = ('2160p: %s seeds; ' % data.get('torrents').get('en').get('2160p').get('seed'))
         except:
             pass
         else:
             tagline += tagline_temp
         try:
-            tagline_temp = ('720p: %s seeds; ' %data[0].get('torrents').get('720p').get('seeds'))
+            tagline_temp = ('1080p: %s seeds; ' % data.get('torrents').get('en').get('1080p').get('seed'))
         except:
             pass
         else:
             tagline += tagline_temp
         try:
-            tagline_temp = ('480p: %s seeds; ' %data[0].get('torrents').get('480p').get('seeds'))
+            tagline_temp = ('720p: %s seeds; ' % data.get('torrents').get('en').get('720p').get('seed'))
+        except:
+            pass
+        else:
+            tagline += tagline_temp
+        try:
+            tagline_temp = ('480p: %s seeds; ' % data.get('torrents').get('en').get('480p').get('seed'))
         except:
             pass
         else:
@@ -98,7 +105,7 @@ class Anime(BaseContentWithSeasons):
             "tvshowtitle": data[-1]['tvshow'],
             "duration": int(data[-1]['runtime'])*60,
             "status": data[-1]['status'],
-            "genre": u" / ".join(genre for genre in data[0].get("genres", [])) or None,
+            "genre": " / ".join(genre for genre in data[0].get("genres", [])) or None,
             "code": data[0].get("tvdb_id"),
             "plot": data[0]['overview'],
             "plotoutline": data[0]['overview']
@@ -217,8 +224,8 @@ def _favourites(dom, **kwargs):
     shows = []
     for fa in favs:
         search = '%s/anime/%s' % (dom[0], fa['id'])
-        req = urllib2.Request(search, headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.66 Safari/537.36", "Accept-Encoding": "none"})
-        response = urllib2.urlopen(req)
+        req = Request(search, headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.66 Safari/537.36", "Accept-Encoding": "none"})
+        response = urlopen(req)
         show1 = json.loads(response.read())
 
         shows.append({
@@ -258,7 +265,12 @@ def _favourites(dom, **kwargs):
 
 
 def _shows(dom, **kwargs):
-    return Anime.get_shows(dom, **kwargs)
+    for d in dom:
+        try:
+            return Anime.get_shows(d, **kwargs)
+        except:
+            continue
+    return []
 
 
 def _seasons(dom, **kwargs):

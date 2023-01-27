@@ -1,5 +1,7 @@
 ﻿#!/usr/bin/python
-import os, sys, xbmc, xbmcgui, mimetypes, time, subprocess, socket, urlparse, urllib2, re
+import os, sys, xbmc, xbmcgui, mimetypes, time, subprocess, socket, re
+from urllib.parse import parse_qsl, urlparse
+from urllib.request import urlopen
 import xml.etree.ElementTree as ET
 from zipfile import ZipFile
 from contextlib import closing
@@ -11,6 +13,7 @@ from kodipopcorntime.settings import addon as _settings
 from kodipopcorntime import request
 from kodipopcorntime.platform import Platform
 from kodipopcorntime.threads import Thread
+import xbmcvfs
 
 __addon__ = sys.modules['__main__'].__addon__
 
@@ -43,15 +46,15 @@ class OverlayText:
 
     def _calculate_the_size(self):
         # get skin resolution
-        tree = ET.parse(os.path.join(xbmc.translatePath("special://skin/"), "addon.xml"))
+        tree = ET.parse(os.path.join(xbmcvfs.translatePath("special://skin/"), "addon.xml"))
         res = tree.findall("./extension/res")[0]
         viewport_w = int(res.attrib["width"])
         viewport_h = int(res.attrib["height"])
         # Adjust size based on viewport, we are using 1080p coordinates
         w = int(int(1920.0 * 0.7) * viewport_w / 1920.0)
         h = int(150 * viewport_h / 1088.0)
-        x = (viewport_w - w) / 2
-        y = (viewport_h - h) / 2
+        x = (viewport_w - w) // 2
+        y = (viewport_h - h) // 2
         return x, y, w, h
 
     def __exit__(self, *exc_info):
@@ -137,8 +140,7 @@ class TorrentEngine:
                 if self._last_status.get('error'):
                     raise TorrentError("torrent2http error: %s" %self._last_status['error'])
             except (JSONDecodeError, socket.timeout, IOError) as e:
-                log('(Torrent) %s: %s' %(e.__class__.__name__, str(e)), LOGLEVEL.NOTICE)
-                sys.exc_clear()
+                log('(Torrent) %s: %s' %(e.__class__.__name__, str(e)), LOGLEVEL.INFO)
         return self._last_status
 
     def files(self, timeout=10):
@@ -148,8 +150,7 @@ class TorrentEngine:
                     raise TorrentError("torrent2http are not running")
                 self._last_files = self._json.request(self._url, "/ls", timeout=timeout)['files'] or self._last_files
             except (JSONDecodeError, socket.timeout, IOError) as e:
-                log('(Torrent) %s: %s' %(e.__class__.__name__, str(e)), LOGLEVEL.NOTICE)
-                sys.exc_clear()
+                log('(Torrent) %s: %s' %(e.__class__.__name__, str(e)), LOGLEVEL.INFO)
         return self._last_files
 
 
@@ -164,9 +165,9 @@ class TorrentEngine:
                 log('(Torrent) File name: %s, MIME info: %s' %(f['name'], str(mimeType)))
                 # if mimeType[0] and mimeType[0][:5] == 'video' and f['size'] > size:
                 # if 'video' in str(mimeType) and f['size'] > size:
-                if(re.match('.*\.avi|.*\.mp4|.*\.mkv',f['name'])):
+                if(re.match('.*\.avi|.*\.mp4|.*\.mkv', f['name'])):
                     self._file_id = i
-                    urllib2.urlopen(f['url'], timeout=50)
+                    urlopen(f['url'], timeout=50)
         try:
             return files[self._file_id]
         except (KeyError, TypeError):
@@ -345,8 +346,8 @@ class Loader(Thread):
 
     def _getSubtitle(self, dirname, filename):
         log('(Loader) Downloading')
-        scheme, netloc, path, _, query, _ = urlparse.urlparse(self._subtitleURL)
-        self._request.request(self._path, "%s://%s" %(scheme, netloc), path, dict(urlparse.parse_qsl(query)))
+        scheme, netloc, path, _, query, _ = urlparse(self._subtitleURL)
+        self._request.request(self._path, "%s://%s" %(scheme, netloc), path, dict(parse_qsl(query)))
         if not os.path.isfile(self._path) or self.stop.is_set():
             return False
 
@@ -404,6 +405,8 @@ class TorrentPlayer(xbmc.Player):
         self.pause()
 
     def playTorrentFile(self, mediaSettings, magnet, item, subtitleURL=None):
+        monitor = xbmc.Monitor()
+
         with TorrentEngine(mediaSettings, magnet) as _TorrentEngine:
             # Loading
             log('(Torrent Player) Loading', LOGLEVEL.INFO)
@@ -428,7 +431,7 @@ class TorrentPlayer(xbmc.Player):
 
                 with Loader(mediaSettings, _TorrentEngine, item, subtitleURL, on_update) as _loader:
                     while not _loader.is_done(0.100):
-                        if xbmc.abortRequested or dialog.iscanceled():
+                        if monitor.abortRequested() or dialog.iscanceled():
                             raise Abort()
 
             # Starts the playback
@@ -437,7 +440,7 @@ class TorrentPlayer(xbmc.Player):
 
             # Waiting for playback to start
             log('(Torrent Player) Waiting for playback to start')
-            for _ in xrange(300):
+            for _ in range(300):
                 if self.isPlaying():
                     break
                 time.sleep(0.100)
@@ -449,7 +452,7 @@ class TorrentPlayer(xbmc.Player):
                 self.setSubtitles(Loader.subtitle)
 
             with OverlayText() as self._overlay:
-                while not xbmc.abortRequested and self.isPlaying():
+                while not monitor.abortRequested() and self.isPlaying():
                     if self._overlay.isShowing():
                         self._overlay.setText("\n".join(self._get_status_lines(_TorrentEngine.status())))
                         time.sleep(0.100)

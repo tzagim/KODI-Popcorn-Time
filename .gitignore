@@ -6,4 +6,5 @@
 Thumbs.db
 ehthumbs.db
 .idea/
-*.pyo
+__pycache__/
+*.zip

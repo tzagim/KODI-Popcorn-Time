@@ -1,5 +1,6 @@
 ﻿#!/usr/bin/python
-import urllib, xbmcplugin
+from urllib.parse import urlencode
+import xbmcplugin
 from .base import _Base
 from kodipopcorntime.settings import addon as _settings
 from kodipopcorntime.logging import log, LOGLEVEL
@@ -13,7 +14,7 @@ class _Base2(_Base):
     def createUrl(self, endpoint, mediaType=None, **params):
         if not mediaType:
             mediaType = self.mediaSettings.mediaType
-        return "%s?%s" %(_settings.base_url, urllib.urlencode(dict([('mediaType', mediaType), ('endpoint', endpoint)], **params)))
+        return "%s?%s" %(_settings.base_url, urlencode(dict([('mediaType', mediaType), ('endpoint', endpoint)], **params)))
 
     def addItem(self, item, path, isFolder=True):
         log("(%s) Adding item '%s'" %(self.interfaceName, item["label"]))
