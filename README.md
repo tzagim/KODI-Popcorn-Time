@@ -9,6 +9,8 @@
 
 This is the continuation of markop159's work on bringing Popcorn Time to Kodi.
 
+=======
+
 ## What it is ##
 With KODI Popcorn Time you can search for Movies, TV Shows and Animes that you can see immediately in KODI.
 
