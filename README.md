@@ -1,49 +1,39 @@
-#This is the continuation of Diblo's work on bringing Popcorn Time to KODI.#
-
-#Personal test for support 4k with KODI#
-
-<hr>
-
-=======
 # KODI Popcorn Time #
 
 This is the continuation of markop159's work on bringing Popcorn Time to Kodi.
 
-=======
+[markop159/KODI-Popcorn-Time](https://github.com/markop159/KODI-Popcorn-Time)
 
-## What it is ##
-With KODI Popcorn Time you can search for Movies, TV Shows and Animes that you can see immediately in KODI.
+<hr>
 
-## Supported Platforms ##
+## Features added ##
+
+* 4K support
 * Kodi 20.0 and later
-* Windows x32 and x64
-* OS X x32 and x64
-* Linux x32, x64 and ARM
-* Raspberry Pi
-* Android ARM 4.0+
+* Movies : ✔️
+* TV-Shows : ✔️
+* Anime : ❌
 
-## torrent2http not found Issue ##
-Please refer to [markop159/KODI-Popcorn-Time#102](https://github.com/markop159/KODI-Popcorn-Time/issues/102), and follow this instructions ->
 
-On directory:
-*"C:\Users\Admin\AppData\Roaming\Kodi\addons\plugin.video.kodipopcorntime\resources\bin"*
+## 2 releases versions ##
 
-Rename folder "windows_x86" to "windows_x64" and restart Kodi.
+* 1 : [V_2.0.1](https://github.com/theRedMercury/KODI-Popcorn-Time/releases/tag/2.0.1) : legacy way, use [torrent2http](http://github.com/steeve/torrent2http) can be choppy for "heavy" 4k movies on a potato machine like raspberry 4
+
+* 2 : [V_2.1.0](https://github.com/theRedMercury/KODI-Popcorn-Time/releases/tag/2.1.0) : use [plugin.video.torrest](https://github.com/i96751414/plugin.video.torrest) improved stability on my raspberry pi 4 with [libreelec](https://github.com/LibreELEC/LibreELEC.tv)
+
+
+## TODO ##
+
+* Fix Anime section
+* clean leagcy code
+
 
 ## Credits ##
-* Fixed KODI Popcorn Time add-on from [Diblo](https://github.com/Diblo/KODI-Popcorn-Time)
-and [markop159](https://github.com/markop159/KODI-Popcorn-Time)
-* KODI Popcorn Time is a rewrite of [xbmctorrent](http://github.com/steeve/xbmctorrent).
+*  Fixed KODI Popcorn Time for Kodi 19 [https://github.com/lubo/KODI-Popcorn-Time](https://github.com/lubo/KODI-Popcorn-Time)
+* [plugin.video.torrest](https://github.com/i96751414/plugin.video.torrest)
+* [reddit](https://www.reddit.com/r/PopCornTimeApp/)
 * [libtorrent-go](http://github.com/steeve/libtorrent-go)
 * [torrent2http](http://github.com/steeve/torrent2http)
 
 
-
-#### Markop159 Repository ####
-
-  - [Has been moved to new location](https://github.com/markop159/Markop159-repository)
-
-## Need more information ##
-Check out our [WIKI page](https://github.com/markop159/KODI-Popcorn-Time/wiki)
 =======
-
