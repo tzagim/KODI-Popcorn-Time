@@ -1,31 +1,20 @@
-# KODI Popcorn Time #
+# Popcorn Time for KODI #
 
-This is the continuation of markop159's work on bringing Popcorn Time to Kodi.
-
-[markop159/KODI-Popcorn-Time](https://github.com/markop159/KODI-Popcorn-Time)
+Better Faster Stronger
 
 <hr>
 
-## Features added ##
+## New V3.0.0 ##
 
-* 4K support
-* Kodi 20.0 and later
-* Movies : ✔️
-* TV-Shows : ✔️
-* Anime : ❌
+* Rename the plugin
+* Tested on Kodi 19 & 20 on x86(win/linux) and raspberry 4
+* Rewrite from scratch the plugin
+* Stop loading useless information, pages load faster than before
+* Support quality video choices ( 4K / FullHD / HD / 480p )
+* Need : [plugin.video.torrest](https://github.com/i96751414/plugin.video.torrest/releases/tag/v0.0.14)
+* Only Movies & TV-Shows are supported
 
-
-## 2 releases versions ##
-
-* 1 : [V_2.0.1](https://github.com/theRedMercury/KODI-Popcorn-Time/releases/tag/2.0.1) : legacy way, use [torrent2http](http://github.com/steeve/torrent2http) can be choppy for "heavy" 4k movies on a potato machine like raspberry 4
-
-* 2 : [V_2.1.0](https://github.com/theRedMercury/KODI-Popcorn-Time/releases/tag/2.1.0) : use [plugin.video.torrest](https://github.com/i96751414/plugin.video.torrest) improved stability on my raspberry pi 4 with [libreelec](https://github.com/LibreELEC/LibreELEC.tv)
-
-
-## TODO ##
-
-* Fix Anime section
-* clean leagcy code
+Enjoy
 
 
 ## Credits ##
