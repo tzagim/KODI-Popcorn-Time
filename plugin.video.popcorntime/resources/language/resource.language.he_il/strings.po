@@ -1,0 +1,1025 @@
+# Kodi Media Center language file
+# Addon Name: KODI Popcorn Time
+# Addon id: plugin.video.popcorntime
+# Addon Provider: lubo
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: https://forum.kodi.tv/\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Team-Kodi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: he_IL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30000"
+msgid "Show More"
+msgstr "הצג עוד"
+
+msgctxt "#30001"
+msgid "KODI Popcorn Time - Search"
+msgstr "פופקורן טיים לקודי - חיפוש"
+
+msgctxt "#30002"
+msgid "Search"
+msgstr "חיפוש"
+
+msgctxt "#30003"
+msgid "Browse by Genre"
+msgstr "עיון לפי סגנון"
+
+msgctxt "#30004"
+msgid "Most Popular"
+msgstr "הפופולריים ביותר"
+
+msgctxt "#30005"
+msgid "Best Rated"
+msgstr "המדורגים ביותר"
+
+msgctxt "#30006"
+msgid "Recently Added"
+msgstr "נוספו לאחרונה"
+
+msgctxt "#30007"
+msgid "Fetching content"
+msgstr "אחזור תוכן"
+
+msgctxt "#30008"
+msgid "Down: %s/s, Up: %s/s"
+msgstr "למטה: %s/s, למעלה: %s/s"
+
+msgctxt "#30009"
+msgid "Play"
+msgstr "נגן"
+
+msgctxt "#30010"
+msgid "Add-on settings"
+msgstr "הגדרות ההרחבה"
+
+msgctxt "#30011"
+msgid "Do you want to play this movie in 3D?"
+msgstr "האם ברצונך להפעיל את הסרט בתלת-ממד?"
+
+msgctxt "#30012"
+msgid "Subtitle:"
+msgstr "כתוביות:"
+
+msgctxt "#30013"
+msgid "Are you sure you want to reset Torrent settings?"
+msgstr "האם אתה בטוח שברצונך לאפס הגדרות טורנט?"
+
+msgctxt "#30014"
+msgid "It is only the settings with "(Torrent)" in the headline, there are affected."
+msgstr "אלו רק הגדרות עם טורנט בכותרת שיושפעו."
+
+msgctxt "#30015"
+msgid "Seeds: "
+msgstr "זרעים: "
+
+msgctxt "#30016"
+msgid "Fetching information"
+msgstr "אחזור מידע"
+
+msgctxt "#30017"
+msgid "Done"
+msgstr "בוצע"
+
+msgctxt "#30018"
+msgid "Fetching information"
+msgstr "אחזור מידע"
+
+msgctxt "#30019"
+msgid "Downloading subtitle"
+msgstr "מוריד כתוביות"
+
+msgctxt "#30020"
+msgid "Starting playback"
+msgstr "מתחיל ניגון"
+
+msgctxt "#30021"
+msgid "Downloading"
+msgstr "מוריד"
+
+msgctxt "#30022"
+msgid "Download is complete"
+msgstr "ההורדה הסתיימה"
+
+msgctxt "#30023"
+msgid "The quality was not found"
+msgstr "הגדרת האיכות לא נמצאה"
+
+msgctxt "#30024"
+msgid "Attempt "
+msgstr "נסיון "
+
+msgctxt "#30025"
+msgid "Sort by Title"
+msgstr "מיון לפי שם"
+
+msgctxt "#30026"
+msgid "Sort by Year"
+msgstr "מיון לפי שנה"
+
+msgctxt "#30027"
+msgid "Last Updated"
+msgstr "עודכן לאחרונה"
+
+msgctxt "#30028"
+msgid "Searching"
+msgstr "מחפש"
+
+msgctxt "#30029"
+msgid "Favourites"
+msgstr "מועדפים"
+
+msgctxt "#30030"
+msgid "Movies"
+msgstr "סרטים"
+
+msgctxt "#30031"
+msgid "Starting"
+msgstr "מתחיל"
+
+msgctxt "#30032"
+msgid "Watch Later"
+msgstr "צפה בהמשך"
+
+msgctxt "#30033"
+msgid "Are you sure you want to delete the cache?"
+msgstr "האם אתה בטוח שברצונך למחוק את המטמון?"
+
+msgctxt "#30034"
+msgid "Title:"
+msgstr "שם:"
+
+msgctxt "#30035"
+msgid "New title:"
+msgstr "שם חדש:"
+
+msgctxt "#30036"
+msgid "Waiting"
+msgstr "ממתין"
+
+msgctxt "#30037"
+msgid "Checking data"
+msgstr "בודק תאריך"
+
+msgctxt "#30038"
+msgid "Trailer"
+msgstr "Trailer"
+
+msgctxt "#30039"
+msgid "Add to Popcorn Favourites"
+msgstr "הוסף למועדפים בפופקורן"
+
+msgctxt "#30040"
+msgid "Remove from Popcorn Favourites"
+msgstr "הסר מהמועדפים בפופקורן"
+
+msgctxt "#30041"
+msgid "Add to Watch Later list"
+msgstr "הוסף לרשימת צפייה בהמשך"
+
+msgctxt "#30042"
+msgid "Remove from Watch Later list"
+msgstr "הסר מרשימת צפייה בהמשך"
+
+msgctxt "#30043"
+msgid "Remove all from Popcorn Favourites"
+msgstr "הסר את הכל מהמועדפים בפופקורן"
+
+msgctxt "#30044"
+msgid "Remove all from Watch Later list"
+msgstr "הסר הכל מרשימת צפייה בהמשך בפופקורן"
+
+msgctxt "#30101"
+msgid "Clear media files"
+msgstr "נקה קובצי מדיה"
+
+msgctxt "#30102"
+msgid "Files"
+msgstr "קבצים"
+
+msgctxt "#30103"
+msgid "Download Path"
+msgstr "נתיב הורדה"
+
+msgctxt "#30104"
+msgid "Keep files after playback/download stops"
+msgstr "שמור את הקבצים לאחר עצירת ניגון או לאחר ההורדה"
+
+msgctxt "#30105"
+msgid "Subtitles"
+msgstr "כתוביות"
+
+msgctxt "#30106"
+msgid "720p and lower"
+msgstr "רק 720p"
+
+msgctxt "#30107"
+msgid "Prefer"
+msgstr "העדפה"
+
+msgctxt "#30108"
+msgid "Network"
+msgstr "רשת"
+
+msgctxt "#30109"
+msgid "Play 3D video"
+msgstr "ניגון וידאו תלת ממדי"
+
+msgctxt "#30110"
+msgid "Max Download Rate (Kilobyte - 0: Unlimited)"
+msgstr "קצב הורדה מרבי (קילובייט - 0: ללא הגבלה)"
+
+msgctxt "#30111"
+msgid "Encryption"
+msgstr "הצפנה"
+
+msgctxt "#30112"
+msgid "Global"
+msgstr "גלובלי"
+
+msgctxt "#30113"
+msgid "Maintenance"
+msgstr "תחזוקה"
+
+msgctxt "#30114"
+msgid "Clear media information"
+msgstr "נקה את פרטי המדיה"
+
+msgctxt "#30115"
+msgid "Proxy domains"
+msgstr "תחומים של פרוקסי"
+
+msgctxt "#30116"
+msgid "Movies (comma-separated hosts)"
+msgstr "סרטים (מארחים המופרדים באמצעות פסיק)"
+
+msgctxt "#30117"
+msgid "Video Quality"
+msgstr "איכות וידאו"
+
+msgctxt "#30118"
+msgid "1080p and lower"
+msgstr "1080p ומטה"
+
+msgctxt "#30119"
+msgid "First priority"
+msgstr "עדיפות ראשונה"
+
+msgctxt "#30120"
+msgid "Second priority"
+msgstr "עדיפות שנייה"
+
+msgctxt "#30121"
+msgid "Third priority"
+msgstr "עדיפות שלישית"
+
+msgctxt "#30122"
+msgid "Max Upload Rate (Kilobyte - 0: Unlimited - Min 15 kB/s)"
+msgstr "קצב העלאה מקסימלי (קילובייט - 0: ללא הגבלה - מינימום 15 kB/s)"
+
+msgctxt "#30123"
+msgid "Forced"
+msgstr "כפוי"
+
+msgctxt "#30124"
+msgid "Enabled"
+msgstr "מאופשר"
+
+msgctxt "#30125"
+msgid "Disabled"
+msgstr "מושבת"
+
+msgctxt "#30126"
+msgid "No"
+msgstr "לא"
+
+msgctxt "#30127"
+msgid "Ask me"
+msgstr "שאל אותי"
+
+msgctxt "#30128"
+msgid "Always"
+msgstr "תמיד"
+
+msgctxt "#30129"
+msgid "TV Shows (comma-separated hosts)"
+msgstr "סדרות (מארחים המופרדים באמצעות פסיק)"
+
+msgctxt "#30130"
+msgid "Advanced"
+msgstr "מתקדם"
+
+msgctxt "#30131"
+msgid "Torrent settings"
+msgstr "הגדרות טורנט"
+
+msgctxt "#30132"
+msgid "Providers"
+msgstr "ספקים"
+
+msgctxt "#30133"
+msgid "Peers (Torrent)"
+msgstr "עמיתים (טורנט)"
+
+msgctxt "#30134"
+msgid "Features (Torrent)"
+msgstr "תכונות (טורנט)"
+
+msgctxt "#30135"
+msgid "Log / debug"
+msgstr "יומן / מידע באגים"
+
+msgctxt "#30136"
+msgid "Keep only incomplete files after exiting"
+msgstr "שמור רק קבצים לא מלאים לאחר היציאה"
+
+msgctxt "#30137"
+msgid "Keep only complete files after exiting"
+msgstr "שמור רק קבצים  מלאים לאחר היציאה"
+
+msgctxt "#30138"
+msgid "Additional (Torrent)"
+msgstr "נוסף (טורנט)"
+
+msgctxt "#30139"
+msgid "Port for incoming connections"
+msgstr "פורט לחיבורים נכנסים"
+
+msgctxt "#30140"
+msgid "Use random port (49152-65535)"
+msgstr "תשתמש בפורט אקראי (49152-65535)"
+
+msgctxt "#30141"
+msgid "Enable TCP protocol"
+msgstr "אפשר פרוטוקול TCP"
+
+msgctxt "#30142"
+msgid "Enable uTP (uTorrent Transport Protocol)"
+msgstr "אפשר פרוטוקול UTP (uTorrent Transport Protocol)"
+
+msgctxt "#30143"
+msgid "The limit of the total number of connections"
+msgstr "הגבלה של מספר החיבורים הכולל"
+
+msgctxt "#30144"
+msgid "Reset"
+msgstr "איפוס"
+
+msgctxt "#30145"
+msgid "The number of peers who try to connect after the initial response"
+msgstr "מספר העמיתים שינסו להתחבר לאחר התגובה הראשונית"
+
+msgctxt "#30146"
+msgid "The total number of connection attempts per second"
+msgstr "המספר הכולל של ניסיונות חיבור לשנייה"
+
+msgctxt "#30147"
+msgid "Number of seconds before the connection attempt failed"
+msgstr "מספר השניות לפני שנסיון החיבור יכשל"
+
+msgctxt "#30149"
+msgid "Number of seconds to wait between connection failures"
+msgstr "מספר השניות להמתנה בין כשלי חיבור"
+
+msgctxt "#30150"
+msgid "Number of failure attempts before peer will be discarded"
+msgstr "מספר ניסיונות הכישלון לפני מחיקת עמיתים"
+
+msgctxt "#30151"
+msgid "Enable DHT (Distributed Hash Table)"
+msgstr "אפשר DHT (Distributed Hash Table)"
+
+msgctxt "#30152"
+msgid "Enable LSD (Local Service Discovery)"
+msgstr "אפשר LSD (Local Service Discovery)"
+
+msgctxt "#30153"
+msgid "Enable NATPMP (NAT Port Mapping Protocol)"
+msgstr "אפשר NATPMP (NAT Port Mapping Protocol)"
+
+msgctxt "#30154"
+msgid "Enable UPnP (Universal Plug and Play)"
+msgstr "אפשר UPnP (Universal Plug and Play)"
+
+msgctxt "#30155"
+msgid "Enable sending scrape request to tracker (Tracker Scrape)"
+msgstr "אפשר שליחת בקשה מהסקייפר לטראקר (Tracker Scrape)"
+
+msgctxt "#30156"
+msgid "Trackers (comma-separated URLs)"
+msgstr "טראקר (כתובות מופרדות באמצעות פסיק)"
+
+msgctxt "#30157"
+msgid "DHT routers (comma-separated host:port pairs)"
+msgstr "ראוטרים של DHT (מארח מופרד באמצעות פסיק: זוגות פורטים)"
+
+msgctxt "#30158"
+msgid "Enable debugging"
+msgstr "אפשר איתור באגים"
+
+msgctxt "#30159"
+msgid "Network (Torrent)"
+msgstr "רשת (טורנט)"
+
+msgctxt "#30160"
+msgid "Search"
+msgstr "חיפוש"
+
+msgctxt "#30162"
+msgid "Movie"
+msgstr "סרט"
+
+msgctxt "#30163"
+msgid "TV Shows"
+msgstr "סדרה"
+
+msgctxt "#30164"
+msgid "Prioritize Hearing Impaired Subtitles"
+msgstr "סדר עדיפויות של כתוביות פגומות בשמיעה"
+
+msgctxt "#30165"
+msgid "Gather movie information from"
+msgstr "אסוף מידע על הסרט מתוך"
+
+msgctxt "#30168"
+msgid "Get subtitles from"
+msgstr "קבל כתוביות מתוך"
+
+msgctxt "#30169"
+msgid "Gather TV information from"
+msgstr "קבל מידע על סדרות מתוך"
+
+msgctxt "#30170"
+msgid "None"
+msgstr "ללא"
+
+msgctxt "#30171"
+msgid "The Movie Database"
+msgstr "מסד הנתונים של הסרט"
+
+msgctxt "#30172"
+msgid "YIFY Subtitles"
+msgstr "כתוביות - YIFY"
+
+msgctxt "#30173"
+msgid "Only 480p"
+msgstr "רק 480p"
+
+msgctxt "#30174"
+msgid "Video"
+msgstr "וידאו"
+
+msgctxt "#30201"
+msgid "Albanian"
+msgstr "אלבנית"
+
+msgctxt "#30202"
+msgid "Arabic"
+msgstr "ערבית"
+
+msgctxt "#30203"
+msgid "Bengali"
+msgstr "בנגאלית"
+
+msgctxt "#30204"
+msgid "Brazilian Portuguese"
+msgstr "פורטוגזית ברזילאית"
+
+msgctxt "#30205"
+msgid "Bulgarian"
+msgstr "בולגרית"
+
+msgctxt "#30206"
+msgid "Chinese"
+msgstr "סינית"
+
+msgctxt "#30207"
+msgid "Croatian"
+msgstr "קרואטית"
+
+msgctxt "#30208"
+msgid "Czech"
+msgstr "צ'כית"
+
+msgctxt "#30209"
+msgid "Danish"
+msgstr "דנית"
+
+msgctxt "#30210"
+msgid "Dutch"
+msgstr "הולנדית"
+
+msgctxt "#30211"
+msgid "English"
+msgstr "אנגלית"
+
+msgctxt "#30212"
+msgid "Farsi/Persian"
+msgstr "פרסית"
+
+msgctxt "#30213"
+msgid "Finnish"
+msgstr "פינית"
+
+msgctxt "#30214"
+msgid "French"
+msgstr "צרפתית"
+
+msgctxt "#30215"
+msgid "German"
+msgstr "גרמנית"
+
+msgctxt "#30216"
+msgid "Greek"
+msgstr "יוונית"
+
+msgctxt "#30217"
+msgid "Hebrew"
+msgstr "עברית"
+
+msgctxt "#30218"
+msgid "Hungarian"
+msgstr "הונגרית"
+
+msgctxt "#30219"
+msgid "Indonesian"
+msgstr "אינדונזית"
+
+msgctxt "#30220"
+msgid "Italian"
+msgstr "איטלקית"
+
+msgctxt "#30221"
+msgid "Japanese"
+msgstr "יפנית"
+
+msgctxt "#30222"
+msgid "Korean"
+msgstr "קוראנית"
+
+msgctxt "#30223"
+msgid "Lithuanian"
+msgstr "ליטאית"
+
+msgctxt "#30224"
+msgid "Macedonian"
+msgstr "מקדונית"
+
+msgctxt "#30225"
+msgid "Malay"
+msgstr "מאלאית"
+
+msgctxt "#30226"
+msgid "Norwegian"
+msgstr "נורווגית"
+
+msgctxt "#30227"
+msgid "Polish"
+msgstr "פולנית"
+
+msgctxt "#30228"
+msgid "Portuguese"
+msgstr "פורטוגזית"
+
+msgctxt "#30229"
+msgid "Romanian"
+msgstr "רומנית"
+
+msgctxt "#30230"
+msgid "Russian"
+msgstr "רוסית"
+
+msgctxt "#30231"
+msgid "Serbian"
+msgstr "סרבית"
+
+msgctxt "#30232"
+msgid "Slovenian"
+msgstr "סלובנית"
+
+msgctxt "#30233"
+msgid "Spanish"
+msgstr "ספרדית"
+
+msgctxt "#30234"
+msgid "Swedish"
+msgstr "שוודית"
+
+msgctxt "#30235"
+msgid "Thai"
+msgstr "תאילנדית"
+
+msgctxt "#30236"
+msgid "Turkish"
+msgstr "טורקית"
+
+msgctxt "#30237"
+msgid "Urdu"
+msgstr "אורדו"
+
+msgctxt "#30238"
+msgid "Vietnamese"
+msgstr "ויאטנמית"
+
+msgctxt "#30300"
+msgid "Cannot find port to bind torrent2http"
+msgstr "לא ניתן למצוא את היציאה להתקשרות אל-torrent2http"
+
+msgctxt "#30301"
+msgid "Cache cleared"
+msgstr "המטמון נוקה"
+
+msgctxt "#30302"
+msgid "Your OS is not supported"
+msgstr "מערכת ההפעלה שלך אינה נתמכת"
+
+msgctxt "#30304"
+msgid "Did not receive any data"
+msgstr "לא התקבלו נתונים כלשהם"
+
+msgctxt "#30305"
+msgid "Did not receive any movies"
+msgstr "לא התקבלו סרטים כלשהם"
+
+msgctxt "#30308"
+msgid "An unknown error has occurred"
+msgstr "אירעה שגיאה לא ידועה"
+
+msgctxt "#30310"
+msgid "Download path does not exist. Please check your addon settings"
+msgstr "נתיב ההורדה אינו קיים. בדוק את הגדרות ההרחבה שלך"
+
+msgctxt "#30313"
+msgid "A torrent error has occurred"
+msgstr "אירעה שגיאה טורנט"
+
+msgctxt "#30314"
+msgid "Torrent settings were reset"
+msgstr "הגדרות טורנט אופסו"
+
+msgctxt "#30315"
+msgid "No movie or tv-show providers were found"
+msgstr "לא נמצאו מקורות לסרטים או לסדרות"
+
+msgctxt "#30316"
+msgid "Torrent file did not contain a movie"
+msgstr "הקובץ טורנט לא הכיל וידאו"
+
+msgctxt "#30317"
+msgid "A connection has not answered before timeout"
+msgstr "החיבור לא נענה לפני פסק הזמן"
+
+msgctxt "#30318"
+msgid "Playback is terminated due to timeout"
+msgstr "הניגון מסתיים עקב פסק זמן"
+
+msgctxt "#30319"
+msgid "Downloading to an unmounted network share is not supported. Please check your addon settings"
+msgstr "הורדה למיקום משותף ברשת אינה נתמכת. בדוק את הגדרות ההרחבה שלך"
+
+msgctxt "#30320"
+msgid "Cannot find torrent2http"
+msgstr "לא ניתן למצוא את torrent2http"
+
+msgctxt "#30321"
+msgid "Cannot make torrent2http executable"
+msgstr "לא ניתן לבצע הפעלה של torrent2http "
+
+msgctxt "#30322"
+msgid "Unable to create cache directory"
+msgstr "לא ניתן ליצור ספריית מטמון"
+
+msgctxt "#30323"
+msgid "There is not enough free space to play. Please free up some space or choose a different download location"
+msgstr "אין מספיק מקום פנוי לניגון. נא לפנות מקום או לבחור מיקום הורדה אחר"
+
+msgctxt "#30324"
+msgid "Max Upload Rate must be above 15 Kilobytes per second. Please go to the addon settings and set a minimum speed of 15 kilobytes per second"
+msgstr "קצב ההעלאה המקסימלי חייב להיות מעל 15 קילובייט לשנייה. אנא עבור להגדרות ההרחבה כדי להגדיר מהירות מינימלית של 15 קילובייט לשנייה"
+
+msgctxt "#30325"
+msgid "You need more space to play %s and %s qualities or choose a lower quality"
+msgstr "אתה צריך יותר שטח אחסון כדי לנגן באיכות %s ו- %s  או לבחור איכות נמוכה יותר"
+
+msgctxt "#30326"
+msgid "You need more space to play %s quality or choose a lower quality"
+msgstr "אתה צריך יותר שטח אחסון כדי לנגן באיכות %s או לבחור איכות נמוכה יותר"
+
+msgctxt "#30327"
+msgid "No results found"
+msgstr "לא התקבלו תוצאות"
+
+msgctxt "#30328"
+msgid "Could not receive a media list as there was no domains that worked"
+msgstr "לא ניתן היה לקבל את רשימת המדיה כי הדומיין לא היה פעיל"
+
+msgctxt "#30329"
+msgid "There was an error with the response from the provider"
+msgstr "ארעה שגיאה בתגובה מהמקורות"
+
+msgctxt "#30350"
+msgid "Movies"
+msgstr "סרטים"
+
+msgctxt "#30351"
+msgid "TV-Shows"
+msgstr "סדרות"
+
+msgctxt "#30352"
+msgid "Anime"
+msgstr "אנימה"
+
+msgctxt "#30353"
+msgid "30350,30351,30352"
+msgstr "30350,30351,30352"
+
+msgctxt "#30400"
+msgid "Action"
+msgstr "פעולה"
+
+msgctxt "#30401"
+msgid "Adventure"
+msgstr "הרפתקאות"
+
+msgctxt "#30402"
+msgid "Animation"
+msgstr "אנימציה"
+
+msgctxt "#30403"
+msgid "Comedy"
+msgstr "קומדיה"
+
+msgctxt "#30404"
+msgid "Crime"
+msgstr "פשע"
+
+msgctxt "#30405"
+msgid "Disaster"
+msgstr "אסונות"
+
+msgctxt "#30406"
+msgid "Documentary"
+msgstr "תיעודי"
+
+msgctxt "#30407"
+msgid "Drama"
+msgstr "דרמה"
+
+msgctxt "#30408"
+msgid "Eastern"
+msgstr "מערבון"
+
+msgctxt "#30409"
+msgid "Family"
+msgstr "משפחה"
+
+msgctxt "#30410"
+msgid "Fan-Film"
+msgstr "סרטי כיף"
+
+msgctxt "#30411"
+msgid "Fantasy"
+msgstr "פנטזיה"
+
+msgctxt "#30412"
+msgid "Film-Noir"
+msgstr "סרט אפל"
+
+msgctxt "#30413"
+msgid "History"
+msgstr "היסטורי"
+
+msgctxt "#30414"
+msgid "Horror"
+msgstr "אימה"
+
+msgctxt "#30415"
+msgid "Indie"
+msgstr "הודי"
+
+msgctxt "#30416"
+msgid "Music"
+msgstr "מוזיקה"
+
+msgctxt "#30417"
+msgid "Mystery"
+msgstr "תעלומה"
+
+msgctxt "#30418"
+msgid "Road"
+msgstr "כביש"
+
+msgctxt "#30419"
+msgid "Romance"
+msgstr "רומנטי"
+
+msgctxt "#30420"
+msgid "Sci-Fi"
+msgstr "מדע בדיוני"
+
+msgctxt "#30421"
+msgid "Short"
+msgstr "קצר"
+
+msgctxt "#30422"
+msgid "Sport"
+msgstr "ספורט"
+
+msgctxt "#30423"
+msgid "Sporting-event"
+msgstr "אירועי ספורט"
+
+msgctxt "#30424"
+msgid "Suspence"
+msgstr "מתח גבוה"
+
+msgctxt "#30425"
+msgid "Thriller"
+msgstr "מותחן"
+
+msgctxt "#30426"
+msgid "TV-Movie"
+msgstr "סרט טלביזיוני"
+
+msgctxt "#30427"
+msgid "War"
+msgstr "מלחמה"
+
+msgctxt "#30428"
+msgid "Western"
+msgstr "מערבון"
+
+msgctxt "#30450"
+msgid "Action"
+msgstr "פעולה"
+
+msgctxt "#30451"
+msgid "Ecchi"
+msgstr "אנימהEcchi"
+
+msgctxt "#30452"
+msgid "Harem"
+msgstr "אנימה Harem"
+
+msgctxt "#30453"
+msgid "Romance"
+msgstr "רומנטי"
+
+msgctxt "#30454"
+msgid "School"
+msgstr "בית ספר"
+
+msgctxt "#30455"
+msgid "Supernatural"
+msgstr "על טבעי"
+
+msgctxt "#30456"
+msgid "Drama"
+msgstr "דרמה"
+
+msgctxt "#30457"
+msgid "Comedy"
+msgstr "קומדיה"
+
+msgctxt "#30458"
+msgid "Mystery"
+msgstr "תעלומה"
+
+msgctxt "#30459"
+msgid "Police"
+msgstr "משטרה"
+
+msgctxt "#30461"
+msgid "Sports"
+msgstr "ספורט"
+
+msgctxt "#30462"
+msgid "Mecha"
+msgstr "אנימה - Mecha"
+
+msgctxt "#30463"
+msgid "Sci-Fi"
+msgstr "מדע בדיוני"
+
+msgctxt "#30464"
+msgid "Slice of Life"
+msgstr "ריאליסטי"
+
+msgctxt "#30465"
+msgid "Fantasy"
+msgstr "פנטזיה"
+
+msgctxt "#30466"
+msgid "Adventure"
+msgstr "הרפתקאות"
+
+msgctxt "#30467"
+msgid "Gore"
+msgstr "שפיכות דמים"
+
+msgctxt "#30468"
+msgid "Music"
+msgstr "מוזיקה"
+
+msgctxt "#30469"
+msgid "Psychological"
+msgstr "פסיכולוגי"
+
+msgctxt "#30470"
+msgid "Shoujo Ai"
+msgstr "אנימה Shoujo Ai"
+
+msgctxt "#30471"
+msgid "Yuri"
+msgstr "אנימה Yuri"
+
+msgctxt "#30472"
+msgid "Magic"
+msgstr "קסם"
+
+msgctxt "#30473"
+msgid "Horror"
+msgstr "אימה"
+
+msgctxt "#30474"
+msgid "Thriller"
+msgstr "מותחן"
+
+msgctxt "#30475"
+msgid "Gender Bender"
+msgstr "שינוי מגדר"
+
+msgctxt "#30476"
+msgid "Parody"
+msgstr "פרודיה"
+
+msgctxt "#30477"
+msgid "Historical"
+msgstr "היסטורי"
+
+msgctxt "#30478"
+msgid "Racing"
+msgstr "מירוץ"
+
+msgctxt "#30479"
+msgid "Samurai"
+msgstr "סמוראי"
+
+msgctxt "#30480"
+msgid "Super Power"
+msgstr "כוחות על"
+
+msgctxt "#30481"
+msgid "Military"
+msgstr "צבע"
+
+msgctxt "#30482"
+msgid "Dementia"
+msgstr "דמנציה"
+
+msgctxt "#30483"
+msgid "Mahou Shounen"
+msgstr "אנימה Mahou Shounen"
+
+msgctxt "#30484"
+msgid "Game"
+msgstr "משחק"
+
+msgctxt "#30485"
+msgid "Martial Arts"
+msgstr "אמנויות לחימה"
+
+msgctxt "#30486"
+msgid "Vampire"
+msgstr "ערפד"
+
+msgctxt "#30487"
+msgid "Kids"
+msgstr "ילדים"
+
+msgctxt "#30488"
+msgid "Mahou Shoujo"
+msgstr "אנימה Mahou Shoujo"
+
+msgctxt "#30489"
+msgid "Space"
+msgstr "חלל"
+
+msgctxt "#30490"
+msgid "Shounen Ai"
+msgstr "אנימה Shounen Ai"
+
+msgctxt "#30498"
+msgid "30450,30451,30452,30453,30454,30455,30456,30457,30458,30459,30461,30462,30463,30464,30465,30466,30467,30468,30469,30470,30471,30472,30473,30474,30475,30476,30477,30478,30479,30480,30481,30482,30483,30484,30485,30486,30487,30488,30489,30490"
+msgstr "30450,30451,30452,30453,30454,30455,30456,30457,30458,30459,30461,30462,30463,30464,30465,30466,30467,30468,30469,30470,30471,30472,30473,30474,30475,30476,30477,30478,30479,30480,30481,30482,30483,30484,30485,30486,30487,30488,30489,30490"
+
+msgctxt "#30499"
+msgid "30400,30401,30402,30403,30404,30405,30406,30407,30408,30409,30410,30411,30412,30413,30414,30415,30416,30417,30418,30419,30420,30421,30422,30423,30424,30425,30426,30427,30428"
+msgstr "30400,30401,30402,30403,30404,30405,30406,30407,30408,30409,30410,30411,30412,30413,30414,30415,30416,30417,30418,30419,30420,30421,30422,30423,30424,30425,30426,30427,30428"

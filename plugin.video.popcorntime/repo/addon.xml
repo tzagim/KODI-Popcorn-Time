@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.popcorntime" name="Kodi Popcorn Time" version="3.0.0" provider-name="theRedMercury">
+    <extension point="xbmc.python.repository" name="Kodi Popcorn Time Repository">
+        <dir minversion="19.0.0">
+            <datadir zip="true">
+                https://github.com/theRedMercury/KODI-Popcorn-Time/releases/download/2.1.0/plugin.video.popcorntime2.1.0.zip
+            </datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Kodi_Popcorn_Time_Repo</summary>
+        <description>Popcorn Time for Kodi</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>

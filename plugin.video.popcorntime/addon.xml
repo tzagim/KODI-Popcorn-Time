@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.popcorntime" name="Popcorn Time" version="3.0.0" provider-name="theRedMercury">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.xbmcswift2" version="19.0.7"/>
+        <import addon="plugin.video.torrest" version="0.0.14"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <platform>all</platform>
+        <website>https://github.com/theRedMercury/KODI-Popcorn-Time</website>
+        <forum>https://github.com/theRedMercury/KODI-Popcorn-Time/issues</forum>q
+        <source>https://github.com/theRedMercury/KODI-Popcorn-Time</source>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <summary lang="de_DE">Immediately stream movies, TV Shows.</summary>
+        <summary lang="en_GB">Immediately stream movies, TV Shows.</summary>
+        <summary lang="es_ES">Immediately stream movies, TV Shows.</summary>
+        <summary lang="fr_FR">Immediately stream movies, TV Shows.</summary>
+        <summary lang="hr_HR">Trenutačno gledajte filmove, TV Serije.</summary>
+        <summary lang="zh_CN">Immediately stream movies, TV Shows.</summary>
+        <summary lang="nl_NL">Immediately stream movies, TV Shows.</summary>
+        <summary lang="pl_PL">Immediately stream movies, TV Shows.</summary>
+        <summary lang="pt_PT">Immediately stream movies, TV Shows.</summary>
+        <summary lang="pt_BR">Immediately stream movies, TV Shows.</summary>
+        <summary lang="sl_SI">Takojšnji ogled Filmov, TV Serij.</summary>
+        <description lang="de_DE">With Popcorn Time you can search for movies, TV shows that you can see immediately in
+            KODI. NOTE: use torrest plugin for download and play.
+        </description>
+        <description lang="en_GB">With Popcorn Time you can search for movies, TV shows that you can see immediately in
+            KODI. NOTE: use torrest plugin for download and play.
+        </description>
+        <description lang="es_ES">With Popcorn Time you can search for movies, TV shows that you can see immediately in
+            KODI. NOTE: use torrest plugin for download and play.
+        </description>
+        <description lang="fr_FR">With Popcorn Time you can search for movies, TV shows that you can see immediately in
+            KODI. NOTE: use torrest plugin for download and play.
+        </description>
+        <description lang="hr_HR">Sa Popcorn Time možete pretraživati filmove, TV serije i Anime koje možete odmah
+            gledati u KODIJU. NAPOMENA: Popcorn Time će nastaviti dijeliti sadržaj dok gledate film, TV seriju ili
+            Anime.
+        </description>
+        <description lang="zh_CN">With Popcorn Time you can search for movies, TV shows that you can see immediately in
+            KODI. NOTE: use torrest plugin for download and play.
+        </description>
+        <description lang="nl_NL">With Popcorn Time you can search for movies, TV shows that you can see immediately in
+            KODI. NOTE: use torrest plugin for download and play.
+        </description>
+        <description lang="pl_PL">With Popcorn Time you can search for movies, TV shows that you can see immediately in
+            KODI. NOTE: use torrest plugin for download and play.
+        </description>
+        <description lang="pt_PT">With Popcorn Time you can search for movies, TV shows that you can see immediately in
+            KODI. NOTE: use torrest plugin for download and play.
+        </description>
+        <description lang="pt_BR">With Popcorn Time you can search for movies, TV shows that you can see immediately in
+            KODI. NOTE: use torrest plugin for download and play.
+        </description>
+        <description lang="sl_SI">Z Popcorn Time lahko iščete Filme, TV Serije in Anime, ki si jih lahko takoj ogledaš v
+            KODI-ju. OPOMBA: KODI Popcorn Time med ogledom filmov, TV Serij ter Anime deli video dalje tudi drugim
+            uporabnikom.
+        </description>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
