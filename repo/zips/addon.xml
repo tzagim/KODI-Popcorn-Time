@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addons>
 <addon id="plugin.video.popcorntime" name="Popcorn Time" version="3.0.0" provider-name="theRedMercury">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
@@ -27,44 +26,35 @@
         <summary lang="pt_PT">Immediately stream movies & TV Shows.</summary>
         <summary lang="pt_BR">Immediately stream movies & TV Shows.</summary>
         <summary lang="sl_SI">Takojšnji ogled Filmov & TV Serij.</summary>
-        <description lang="de_DE">With Popcorn Time you can search for movies, TV shows that you can see immediately in
-            KODI.
+        <description lang="de_DE">With Popcorn Time you can search for movies, TV shows that you can see immediately in KODI.
             NOTE: use torrest plugin for download and play.
         </description>
-        <description lang="en_GB">With Popcorn Time you can search for movies, TV shows that you can see immediately in
-            KODI.
+        <description lang="en_GB">With Popcorn Time you can search for movies, TV shows that you can see immediately in KODI.
             NOTE: use torrest plugin for download and play.
         </description>
-        <description lang="es_ES">With Popcorn Time you can search for movies, TV shows that you can see immediately in
-            KODI.
+        <description lang="es_ES">With Popcorn Time you can search for movies, TV shows that you can see immediately in KODI.
             NOTE: use torrest plugin for download and play.
         </description>
-        <description lang="fr_FR">With Popcorn Time you can search for movies, TV shows that you can see immediately in
-            KODI.
+        <description lang="fr_FR">With Popcorn Time you can search for movies, TV shows that you can see immediately in KODI.
             NOTE: use torrest plugin for download and play.
         </description>
         <description lang="hr_HR">Sa Popcorn Time možete pretraživati filmove, TV serije i Anime koje možete odmah
             gledati u KODIJU. NAPOMENA: Popcorn Time će nastaviti dijeliti sadržaj dok gledate film, TV seriju ili
             Anime.
         </description>
-        <description lang="zh_CN">With Popcorn Time you can search for movies, TV shows that you can see immediately in
-            KODI.
+        <description lang="zh_CN">With Popcorn Time you can search for movies, TV shows that you can see immediately in KODI.
             NOTE: use torrest plugin for download and play.
         </description>
-        <description lang="nl_NL">With Popcorn Time you can search for movies, TV shows that you can see immediately in
-            KODI.
+        <description lang="nl_NL">With Popcorn Time you can search for movies, TV shows that you can see immediately in KODI.
             NOTE: use torrest plugin for download and play.
         </description>
-        <description lang="pl_PL">With Popcorn Time you can search for movies, TV shows that you can see immediately in
-            KODI.
+        <description lang="pl_PL">With Popcorn Time you can search for movies, TV shows that you can see immediately in KODI.
             NOTE: use torrest plugin for download and play.
         </description>
-        <description lang="pt_PT">With Popcorn Time you can search for movies, TV shows that you can see immediately in
-            KODI.
+        <description lang="pt_PT">With Popcorn Time you can search for movies, TV shows that you can see immediately in KODI.
             NOTE: use torrest plugin for download and play.
         </description>
-        <description lang="pt_BR">With Popcorn Time you can search for movies, TV shows that you can see immediately in
-            KODI.
+        <description lang="pt_BR">With Popcorn Time you can search for movies, TV shows that you can see immediately in KODI.
             NOTE: use torrest plugin for download and play.
         </description>
         <description lang="sl_SI">Z Popcorn Time lahko iščete Filme, TV Serije in Anime, ki si jih lahko takoj ogledaš v
@@ -77,4 +67,3 @@
         </assets>
     </extension>
 </addon>
-</addons>
