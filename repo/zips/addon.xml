@@ -15,17 +15,17 @@
         <forum>https://github.com/theRedMercury/KODI-Popcorn-Time/issues</forum>q
         <source>https://github.com/theRedMercury/KODI-Popcorn-Time</source>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <summary lang="de_DE">Immediately stream movies & TV Shows.</summary>
-        <summary lang="en_GB">Immediately stream movies & TV Shows.</summary>
-        <summary lang="es_ES">Immediately stream movies & TV Shows.</summary>
-        <summary lang="fr_FR">Immediately stream movies & TV Shows.</summary>
-        <summary lang="hr_HR">Trenutačno gledajte filmove & TV Serije.</summary>
-        <summary lang="zh_CN">Immediately stream movies & TV Shows.</summary>
-        <summary lang="nl_NL">Immediately stream movies & TV Shows.</summary>
-        <summary lang="pl_PL">Immediately stream movies & TV Shows.</summary>
-        <summary lang="pt_PT">Immediately stream movies & TV Shows.</summary>
-        <summary lang="pt_BR">Immediately stream movies & TV Shows.</summary>
-        <summary lang="sl_SI">Takojšnji ogled Filmov & TV Serij.</summary>
+        <summary lang="de_DE">Immediately stream movies and TV Shows.</summary>
+        <summary lang="en_GB">Immediately stream movies and TV Shows.</summary>
+        <summary lang="es_ES">Immediately stream movies and TV Shows.</summary>
+        <summary lang="fr_FR">Immediately stream movies and TV Shows.</summary>
+        <summary lang="hr_HR">Trenutačno gledajte filmove and TV Serije.</summary>
+        <summary lang="zh_CN">Immediately stream movies and TV Shows.</summary>
+        <summary lang="nl_NL">Immediately stream movies and TV Shows.</summary>
+        <summary lang="pl_PL">Immediately stream movies and TV Shows.</summary>
+        <summary lang="pt_PT">Immediately stream movies and TV Shows.</summary>
+        <summary lang="pt_BR">Immediately stream movies and TV Shows.</summary>
+        <summary lang="sl_SI">Takojšnji ogled Filmov and TV Serij.</summary>
         <description lang="de_DE">With Popcorn Time you can search for movies, TV shows that you can see immediately in KODI.
             NOTE: use torrest plugin for download and play.
         </description>
