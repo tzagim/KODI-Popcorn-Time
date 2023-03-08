@@ -45,19 +45,21 @@ class API:
         30428: "western"
     }
 
+    def __init__(self):
+        pass
+
     """
     Search :    {domain}/{types}/1?keywords={keywords}
     List :      {domain}/{types}/{page}?genre={genre}&sort={sort}
     Season :    {domain}/{types}/{imdb_id}
     """
-
     @staticmethod
     def get_list(utils, dom_link, types, page, genre, sort_request):
         req = Request(
             f"{dom_link}/{types}/{page}?genre={genre}&sort={sort_request}",
             headers=API.header,
         )
-        return API._get_request(utils, req)
+        return API.get_request(utils, req)
 
     @staticmethod
     def get_list_show_all(utils, dom_link, types, id_show):
@@ -65,18 +67,18 @@ class API:
             f"{dom_link}/{types}/{id_show}",
             headers=API.header,
         )
-        return API._get_request(utils, req)
+        return API.get_request(utils, req)
 
     @staticmethod
     def get_search(utils, dom_link, types, keywords):
         req = Request(
-            f"{dom_link}/{types}/1?keywords={keywords}",
+            f"{dom_link}/{types}/1?keywords={keywords.replace(' ', '+')}",
             headers=API.header,
         )
-        return API._get_request(utils, req)
+        return API.get_request(utils, req)
 
     @staticmethod
-    def _get_request(utils, request):
+    def get_request(utils, request):
         try:
             response = urlopen(request)
             results = json.loads(response.read())
