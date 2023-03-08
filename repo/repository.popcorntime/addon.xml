@@ -4,7 +4,7 @@
         <dir minversion="19.0.0">
             <info compressed="false">https://raw.githubusercontent.com/theRedMercury/KODI-Popcorn-Time/master/repo/zips/addon.xml</info>
             <checksum>https://raw.githubusercontent.com/theRedMercury/KODI-Popcorn-Time/master/repo/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/theRedMercury/KODI-Popcorn-Time/tree/master/repo/zips/files/</datadir>
+            <datadir zip="true">https://github.com/theRedMercury/KODI-Popcorn-Time/raw/master/repo/zips/files/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
