@@ -5,7 +5,38 @@ __version__ = "3.0.0"
 __author__ = "theRedMercury"
 
 import json
+import re
 from urllib.request import Request, urlopen
+
+
+def get_torrest_plugin_url(magnet_link, with_run=False) -> str:
+    if with_run:
+        return f"runplugin(plugin://plugin.video.torrest/play_magnet?magnet={magnet_link})"
+
+    return f"plugin://plugin.video.torrest/play_magnet?magnet={magnet_link}"
+
+
+def get_youtube_plugin_url(trailer_url) -> str:
+    trailer = ""
+    try:
+        trailer_regex = re.match('^[^v]+v=(.{11}).*', trailer_url)
+        trailer = f"plugin://plugin.video.youtube/?action=play_video&videoid={trailer_regex.group(1)}"
+    except:
+        pass
+    return trailer
+
+
+def get_stream_info_video(quality):
+    if quality == "2160p":
+        return {"width": 3840, "height": 2160}
+    if quality == "1080p":
+        return {"width": 1920, "height": 1080}
+    if quality == "720p":
+        return {"width": 1280, "height": 720}
+    if quality == "480p":
+        return {"width": 720, "height": 480}
+
+    return {"width": 3840, "height": 2160}
 
 
 class API:
@@ -53,6 +84,7 @@ class API:
     List :      {domain}/{types}/{page}?genre={genre}&sort={sort}
     Season :    {domain}/{types}/{imdb_id}
     """
+
     @staticmethod
     def get_list(utils, dom_link, types, page, genre, sort_request):
         req = Request(

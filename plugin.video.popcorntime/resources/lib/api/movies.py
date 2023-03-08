@@ -4,9 +4,7 @@ __license__ = "GPLv3"
 __version__ = "3.0.0"
 __author__ = "theRedMercury"
 
-import re
-
-from resources.lib.api.api import API
+from resources.lib.api.api import API, get_torrest_plugin_url, get_youtube_plugin_url, get_stream_info_video
 from resources.lib.utils import get_setting
 
 
@@ -45,16 +43,26 @@ class MovieApi:
     def populate_items(pct_plugin, json_reply):
 
         first_l = get_setting("first_lang_video")
+        second_l = get_setting("second_lang_video")
         quality_ask = get_setting("movies_quality") or '4k'
+
         quality_ask = '2160p' if quality_ask == '4k' else quality_ask
 
         items = []
         for result in json_reply:
 
             keys_language = list(result.get('torrents').keys()) or ['en']
+            subtitles = list(result.get('exist_translations')) or ['en']
             quality = sorted([list(result.get('torrents').get(k).keys()) for k in result.get('torrents').keys()][0],
                              key=lambda x: int(x[:-1] if len(x) > 1 else x), reverse=True) or []
-            quality_found = quality_ask if quality_ask in result.get('torrents').get(keys_language[0]).keys() else \
+
+            language_found = keys_language[0]
+            if first_l in keys_language:
+                language_found = first_l
+            elif second_l in keys_language:
+                language_found = second_l
+
+            quality_found = quality_ask if quality_ask in result.get('torrents').get(language_found).keys() else \
                 quality[0]
 
             stats_torrents = ""
@@ -64,31 +72,21 @@ class MovieApi:
                 for q in quality:
                     stats_torrents += f"{str(q).ljust(5, ' ')} : {result.get('torrents').get(lang).get(q).get('filesize')} | S({result.get('torrents').get(lang).get(q).get('seed')}) / P({result.get('torrents').get(lang).get(q).get('peer')})\n"
 
-            stats_torrents += "lang : " + str(keys_language) + "\n"
+            stats_torrents += "lang : " + ', '.join(keys_language) + "\n"
+            stats_torrents += "sub : " + ', '.join(subtitles) + "\n"
 
             for lang in keys_language:
                 for q in quality:
                     stats_torrents_full += f"{str(q).ljust(5, ' ')} : {result.get('torrents').get(lang).get(q).get('filesize')} | Seed({result.get('torrents').get(lang).get(q).get('seed')}) / Peer({result.get('torrents').get(lang).get(q).get('peer')})\n"
 
-            magnet_url = result.get('torrents').get(keys_language[0]).get(quality_found).get('url')
+            magnet_url = result.get('torrents').get(language_found).get(quality_found).get('url')
 
             # SUB MENU
             menu = []
             for q in quality:
                 menu.append((f"Play {q}",
-                             f"RunPlugin(plugin://plugin.video.torrest/play_magnet?magnet={result.get('torrents').get(keys_language[0]).get(q).get('url')})"))
-            """
-            # Useless 
-            menu.append((pct_plugin.tr("add_favorite"),
-                         f"RunPlugin(plugin://plugin.video.popcorntime?cmd=add_fav&action=movies&id={result.get('imdb_id')})"))
-            """
-
-            """
-            # Not supported
-            for q in quality:
-                menu.append((f"Download {q}",
-                             f"RunPlugin(plugin://plugin.video.torrest/insert?magnet={result.get('torrents').get(keys_language[0]).get(q).get('url')})"))
-            """
+                             get_torrest_plugin_url(result.get('torrents').get(language_found).get(q).get('url'),
+                                                    True)))
 
             item = {
                 "label": result.get('title'),
@@ -112,26 +110,25 @@ class MovieApi:
                     'mpaa': result.get('certification'),
                     'plot': (result.get('synopsis') or "") + "\n" + stats_torrents_full,
                     'plotoutline': stats_torrents + (result.get('synopsis') or ""),
-                    'trailer': MovieApi._get_item_trailer(result.get('trailer')),
+                    'trailer': get_youtube_plugin_url(result.get('trailer')),
+                },
+
+                "stream_info": {
+                    "video": get_stream_info_video(quality_found),
+                    "audio": {
+                        "language": ', '.join(keys_language)
+                    },
+                    'subtitle': {
+                        'language': ', '.join(subtitles)
+                    }
                 },
 
                 "context_menu": menu,
                 "is_playable": True,
                 "replace_context_menu": True,
 
-                "path": f"plugin://plugin.video.torrest/play_magnet?magnet={magnet_url}",
+                "path": get_torrest_plugin_url(magnet_url),
             }
             items.append(item)
 
         return items
-
-    @staticmethod
-    def _get_item_trailer(trailer_url):
-        trailer = ''
-        try:
-            trailer_regex = re.match('^[^v]+v=(.{11}).*', trailer_url)
-            trailer_id = trailer_regex.group(1)
-            trailer = 'plugin://plugin.video.youtube/?action=play_video&videoid=%s' % trailer_id
-        except:
-            pass
-        return trailer

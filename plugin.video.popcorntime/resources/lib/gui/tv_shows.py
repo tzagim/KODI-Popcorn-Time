@@ -5,6 +5,7 @@ __version__ = "3.0.0"
 __author__ = "theRedMercury"
 
 import os.path
+
 import xbmcswift2
 
 from resources.lib.api.api import API
@@ -109,6 +110,8 @@ class TvShowList(xbmcswift2.Module):
         self.pct_plugin.utils.log.debug(f"list_items int_page : {next_page} ")
         items.append(
             {'label': self.pct_plugin.tr('show_more'),
+             'icon': get_media("tvshows", "more.png"),
+             'thumbnail': get_media("tvshows", "more_thumbnail.png"),
              'path': self.url_for('tv_shows.list_items', sort_request=sort_request, page=next_page, genre=genre,
                                   explicit=True),
              'offscreen': True},

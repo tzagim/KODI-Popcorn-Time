@@ -7,6 +7,7 @@ __author__ = "theRedMercury"
 import os
 import sys
 import traceback
+
 import xbmcaddon
 from xbmcswift2 import xbmcgui
 
@@ -15,8 +16,26 @@ __addon__ = xbmcaddon.Addon(id="plugin.video.popcorntime")
 __resources_path__ = os.path.join(__addon__.getAddonInfo('path'), 'resources')
 __media_path__ = os.path.join(__resources_path__, 'media')
 
+QUALITIES = ["4k", "1080p", "720p", "480p"]
+
+LANG_API = ["en", "en", 'ar', 'bg', 'pt-br', 'bn', 'cn', 'ca', "en", 'da', 'de', "en", "en", 'fi', 'fr', 'gl', "en",
+            'he', 'hr', 'id', 'it', 'ja', 'ko', 'lt', "en", 'ml', 'no', 'pl', 'pt', 'ro', 'ru', 'sr', 'sv', "en", "en",
+            'ta', 'th', 'ur', 'vi', ]
+
+LANG = ["en", "Albanian", "Arabic", "Bengali", "Brazilian Portuguese", "Bulgarian", "Chinese", "Croatian", "Czech",
+        "Danish", "Dutch", "English", "Farsi/Persian", "Finnish", "French", "German", "Greek", "Hebrew", "Hungarian",
+        "Indonesian", "Italian", "Japanese", "Korean", "Lithuanian", "Macedonian", "Malay", "Norwegian",
+        "Polish", "Portuguese", "Romanian", "Russian", "Serbian", "Slovenian", "Spanish", "Swedish", "Thai", "Turkish",
+        "Urdu", "Vietnamese"]
+
 
 def get_setting(id_set):
+    if id_set == "movies_quality":
+        return QUALITIES[int(__addon__.getSetting(id_set))]
+
+    if id_set == "first_lang_video" or id_set == "second_lang_video":
+        return LANG_API[int(__addon__.getSetting(id_set))]
+
     return __addon__.getSetting(id_set)
 
 

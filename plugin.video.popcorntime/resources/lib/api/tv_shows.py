@@ -4,7 +4,7 @@ __license__ = "GPLv3"
 __version__ = "3.0.0"
 __author__ = "theRedMercury"
 
-from resources.lib.api.api import API
+from resources.lib.api.api import API, get_torrest_plugin_url, get_stream_info_video
 from resources.lib.utils import get_setting
 
 
@@ -56,7 +56,7 @@ class TvShowAPI:
         items = []
         for result in json_reply:
             item = {
-                "label": result.get('title'),
+                "label": f"{result.get('title')} ({result.get('num_seasons')} seasons)",
                 "icon": result.get('images').get('poster'),
                 "thumbnail": result.get('images').get('poster'),
                 "properties": {
@@ -66,6 +66,7 @@ class TvShowAPI:
                 "info": {
                     'mediatype': 'tvshow',
                     'title': result.get('title'),
+                    'tagline': result.get('num_seasons'),
                     'year': int(result.get('year')),
                     'genre': ', '.join(genre for genre in result.get('genres', [])) or None,
                     'rating': float(int(result.get('rating').get('percentage')) / 10),
@@ -73,6 +74,7 @@ class TvShowAPI:
                     'imdbnumber': result.get('imdb_id'),
                     'code': result.get('imdb_id'),
                     'plot': result.get('synopsis'),
+                    'plotoutline': result.get('synopsis'),
                 },
 
                 "path": plugin.url_for("tv_shows.list_items_season",
@@ -96,6 +98,7 @@ class TvShowAPI:
 
                 stats_torrents = ""
                 stats_torrents_full = ""
+                subtitles = list(json_reply.get('exist_translations')) or ['en']
                 quality = sorted(list(episode.get('torrents').keys()), key=lambda x: int(x[:-1] if len(x) > 1 else x),
                                  reverse=True) or []
 
@@ -106,12 +109,14 @@ class TvShowAPI:
                 for q in quality:
                     stats_torrents_full += f"{str(q).ljust(5, ' ')} | Seed({episode.get('torrents').get(q).get('seeds')}) / Peer({episode.get('torrents').get(q).get('peers')})\n"
 
+                stats_torrents_full += "lang : " + json_reply.get('contextLocale') + "\n"  # or original_language
+                stats_torrents_full += "sub : " + ', '.join(subtitles) + "\n"
+
                 magnet_url = episode.get('torrents').get(quality_found).get('url')
 
                 menu = []
                 for q in quality:
-                    menu.append((f"Play {q}",
-                                 f"RunPlugin(plugin://plugin.video.torrest/play_magnet?magnet={episode.get('torrents').get(q).get('url')})"))
+                    menu.append((f"Play {q}", get_torrest_plugin_url(episode.get('torrents').get(q).get('url'), True)))
 
                 item = {
                     "label": f"{episode.get('episode')} : {episode.get('title')}",
@@ -128,17 +133,26 @@ class TvShowAPI:
                         'plot': stats_torrents_full + (episode.get('overview') or ""),
                         'imdbnumber': json_reply.get('imdb_id'),
                         'code': json_reply.get('imdb_id'),
-                        'tagline': ' / '.join(quality),
                         'year': int(json_reply.get('year')),
                         'genre': ', '.join(genre for genre in json_reply.get('genres', [])) or None,
                         'rating': float(int(json_reply.get('rating').get('percentage')) / 10),
                         'votes': json_reply.get('rating').get('votes'),
                     },
 
+                    "stream_info": {
+                        "video": get_stream_info_video(quality_found),
+                        "audio": {
+                            "language": json_reply.get('contextLocale')
+                        },
+                        'subtitle': {
+                            'language': ', '.join(subtitles)
+                        }
+                    },
+
                     "context_menu": menu,
                     "is_playable": True,
                     "replace_context_menu": True,
-                    "path": f"plugin://plugin.video.torrest/play_magnet?magnet={magnet_url}",
+                    "path": get_torrest_plugin_url(magnet_url),
                 }
 
                 items.append(item)

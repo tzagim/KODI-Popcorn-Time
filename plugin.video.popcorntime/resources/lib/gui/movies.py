@@ -5,6 +5,7 @@ __version__ = "3.0.0"
 __author__ = "theRedMercury"
 
 import os.path
+
 import xbmcswift2
 
 from resources.lib.api.api import API
@@ -72,7 +73,6 @@ class MovieMenu(xbmcswift2.Module):
         return items
 
     def search(self):
-        self.pct_plugin.utils.log.debug("go to search")
         query = self.keyboard(heading=self.pct_plugin.tr('search'))
         if query:
             self.plugin.redirect(self.url_for('movies.search', keyword=query, explicit=True))
@@ -97,6 +97,8 @@ class MovieList(xbmcswift2.Module):
 
         items.append(
             {'label': self.pct_plugin.tr('show_more'),
+             'icon': get_media("movies", "more.png"),
+             'thumbnail': get_media("movies", "more_thumbnail.png"),
              'path': self.url_for('movies.list_items', sort_request=sort_request, page=str(int(page) + 1), genre=genre,
                                   explicit=True),
              'offscreen': True
