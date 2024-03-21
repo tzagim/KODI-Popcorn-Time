@@ -12,10 +12,8 @@ class MovieApi:
     types = "movies"
 
     domains = [
-        "https://movies-api.ga",
-        "https://movies-api.tk",
-        "https://popcorn-time.ga",
-        "https://shows.cf",
+        "https://yrkde.link",
+        "https://jfper.link",
     ]
 
     def __init__(self):
