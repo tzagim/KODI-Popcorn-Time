@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 __license__ = "GPLv3"
-__version__ = "3.0.0"
+__version__ = "3.0.1"
 __author__ = "Tzagim"
 
 from resources.lib.api.api import API, get_torrest_plugin_url, get_stream_info_video

@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 __license__ = "GPLv3"
-__version__ = "3.0.0"
-__author__ = "theRedMercury"
+__version__ = "3.0.1"
+__author__ = "Tzagim"
 
 from xbmcswift2 import Plugin
 
