@@ -2,7 +2,7 @@
 
 __license__ = "GPLv3"
 __version__ = "3.0.0"
-__author__ = "theRedMercury"
+__author__ = "Tzagim"
 
 from resources.lib.api.api import API, get_torrest_plugin_url, get_stream_info_video
 from resources.lib.utils import get_setting

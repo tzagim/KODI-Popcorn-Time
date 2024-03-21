@@ -2,7 +2,7 @@
 
 __license__ = "GPLv3"
 __version__ = "3.0.0"
-__author__ = "theRedMercury"
+__author__ = "Tzagim"
 
 import os.path
 

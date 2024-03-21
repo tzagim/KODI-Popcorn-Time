@@ -1,3 +1,6 @@
+v3.0.1
+- Fix url
+
 v3.0.0
 - Start from scratch source code
 - Use xbmcswift2 api
